@@ -6,11 +6,13 @@ public class IntroUI : MonoBehaviour
     [SerializeField] private Button languageButtonNL;
     [SerializeField] private Button languageButtonEN;
     [SerializeField] private Button continueButton;
+    [SerializeField] private GameObject uiRoot;
     [SerializeField] private GameObject languageRoot;
     [SerializeField] private GameObject introRoot;
 
     private void Start()
     {
+        uiRoot.SetActive(true);
         languageRoot.SetActive(true);
         introRoot.SetActive(false);
     }

@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c3f83053ff62142935122c7f9ca3f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arBackgroundHandler: {fileID: 6869103327337760760}
+  arBackgroundHandler: {fileID: 0}
   trackableObjects:
   - {fileID: 848587264}
   - {fileID: 258485303}
@@ -200,7 +200,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4774571036383852173
 Transform:
   m_ObjectHideFlags: 0

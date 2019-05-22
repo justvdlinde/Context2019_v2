@@ -239,7 +239,7 @@ PrefabInstance:
     - target: {fileID: 1477555141873076484, guid: ce3cbbaf0b9028047ab1e0604874e10d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -609.9
+      value: -609.89996
       objectReference: {fileID: 0}
     - target: {fileID: 1477555141873076484, guid: ce3cbbaf0b9028047ab1e0604874e10d,
         type: 3}
@@ -257,6 +257,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: c91ea291e190991408209bb2be21273c,
         type: 3}
+    - target: {fileID: 8821405224305983815, guid: ce3cbbaf0b9028047ab1e0604874e10d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4134199726863480758, guid: ce3cbbaf0b9028047ab1e0604874e10d,
         type: 3}
       propertyPath: m_Depth
@@ -295,7 +300,7 @@ PrefabInstance:
     - target: {fileID: 4622902756945289708, guid: ce3cbbaf0b9028047ab1e0604874e10d,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce3cbbaf0b9028047ab1e0604874e10d, type: 3}
@@ -364,6 +369,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Item Info UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716019000546969872, guid: d41a58a5dcd05bc47b7f578283c40bde,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8469621120651347413, guid: d41a58a5dcd05bc47b7f578283c40bde,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5319556826667284638, guid: d41a58a5dcd05bc47b7f578283c40bde,
         type: 3}

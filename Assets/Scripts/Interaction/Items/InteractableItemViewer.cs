@@ -97,12 +97,6 @@ public class InteractableItemViewer : MonoBehaviour
     private void View()
     {
         // TODO: refactor to be more multiplatform
-
-        if (Input.touchCount > 0)
-        { 
-            Debug.Log(Input.touches[0].deltaPosition);
-        }
-
         if (Input.GetMouseButton(0))
         {
             float horizontalDelta = 0;
