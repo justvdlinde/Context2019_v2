@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c376a9430730cc4f9b2d73ef90800af, type: 3}
+  m_Name: Locations
+  m_EditorClassIdentifier: 
+  SheetName: Context-DB
+  WorksheetName: Locations
+  dataArray:
+  - id: ID_LOCATION_001
+    name: De Grote Zaal
+    description: De grote zaal is waar belangrijke gesprekken werden gehouden
+    story: Dit is het verhaal wat is afgespeeld in de voortuin
+  - id: ID_LOCATION_002
+    name: De Witte Toren
+    description: De witte toren werd gebouwd in 1300. De witte bakstenen maken het
+      uniek voor de rest van het kasteel
+    story: Dit is het verhaal wat is afgespeeld in de achtertuin
+  - id: ID_LOCATION_003
+    name: De Grote Poort
+    description: De grote poort diende als voordeur van het kasteel. Hier kwamen de
+      meeste gasten, handelaren binnen
+    story: Dit is het verhaal wat is afgespeeld op het middenhof

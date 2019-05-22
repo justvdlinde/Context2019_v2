@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b05b65d78de0ce4a98e21927c78a689, type: 3}
+  m_Name: Items
+  m_EditorClassIdentifier: 
+  SheetName: Context-DB
+  WorksheetName: Items
+  dataArray:
+  - id: ID_ITEM_001
+    name: Zwaard
+    description: Dit zwaard werd gebruikt in de jaren 1600
+  - id: ID_ITEM_002
+    name: Pot
+    description: Potten waren gemaakt van klei
+  - id: ID_ITEM_003
+    name: Grootboek
+    description: In het grootboek werden de boekhoudingen gedaan zoals het rantsoen
