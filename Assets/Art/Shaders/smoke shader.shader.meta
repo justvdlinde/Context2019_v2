@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 3e58e538c56b78d4f8690ae0f34be09c
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _gradient: {fileID: 2800000, guid: f31338f8de860e1439760d15f170bdc3, type: 3}
+  - _smokeflipbook: {fileID: 2800000, guid: 58431594e0508664f82f4c6ce9538fb3, type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
