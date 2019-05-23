@@ -8,6 +8,13 @@ public class MenuMovementController : MonoBehaviour
     [SerializeField] private float rotateSpeed;
     [SerializeField] private float rotateSpeedMobile;
 
+    [SerializeField, HideInInspector] private Transform cam;
+
+    private void OnValidate()
+    {
+        cam = GetComponentInChildren<Camera>().transform;
+    }
+
     private void Update()
     {
         if (Input.GetMouseButton(0))
@@ -34,8 +41,9 @@ public class MenuMovementController : MonoBehaviour
             //Quaternion extraRotation = Quaternion.AngleAxis(-horizontalDelta / transform.localScale.x * rotateSpeed, Vector3.up)
             //                            * Quaternion.AngleAxis(verticalDelta / transform.localScale.y * rotateSpeed, Vector3.right);
 
-            //transform.rotation = transform.transform.rotation * extraRotation;
+            ////transform.rotation = transform.transform.rotation * extraRotation;
             transform.RotateAround(transform.position, Vector3.up, horizontalDelta);
+            cam.RotateAround(transform.position, Vector3.right, verticalDelta);
         }
     }
 }
