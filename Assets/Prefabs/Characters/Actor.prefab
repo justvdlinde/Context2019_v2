@@ -483,7 +483,6 @@ GameObject:
   - component: {fileID: 5437303221368755516}
   - component: {fileID: 9055603162854237072}
   - component: {fileID: 4673477013239722949}
-  - component: {fileID: 335869484211969726}
   - component: {fileID: 3621611386792161418}
   m_Layer: 0
   m_Name: Actor
@@ -540,27 +539,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &335869484211969726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1755950677001804966}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51f45c2d67dd73040ac521c92b4e0d3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetObject: {fileID: 0}
-  speedParameter: Speed
-  turnSmoothing: 15
-  speedDampTime: 0.1
-  slowingSpeed: 0.175
-  turnSpeedThreshold: 0.5
-  inputHoldDelay: 0.5
-  agent: {fileID: 3621611386792161418}
-  animator: {fileID: 4673477013239722949}
 --- !u!195 &3621611386792161418
 NavMeshAgent:
   m_ObjectHideFlags: 0
