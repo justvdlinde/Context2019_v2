@@ -21,6 +21,7 @@ public class HierarchyDividerEditor
         divider.tag = EditorOnlyTag;
         divider.name = "New divider";
         Selection.objects = new GameObject[1] { divider };
+        Undo.RegisterCreatedObjectUndo(divider, "Create divider");
     }
 
     private static void HierarchyOnGUI(int instanceID, Rect rect)
