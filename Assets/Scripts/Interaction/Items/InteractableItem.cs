@@ -13,8 +13,8 @@ public class InteractableItem : MonoBehaviour, IInteractable
     public GameObject GameObject { get { return gObject; } }
     public Collider Collider { get { return collider; } }
 
-    public Action InteractionStart;
-    public Action InteractionStop;
+    public Action InteractionStartEvent { get; set; }
+    public Action InteractionStopEvent { get; set; }
 
     public bool HideAtStart => hideAtStart;
     [SerializeField] private bool hideAtStart;
@@ -52,12 +52,12 @@ public class InteractableItem : MonoBehaviour, IInteractable
             rigidbody.isKinematic = true;
         }
 
-        InteractionStart?.Invoke();
+        InteractionStartEvent?.Invoke();
     }
     
     public void OnInteractionStop()
     {
-        InteractionStop?.Invoke();
+        InteractionStopEvent?.Invoke();
 
         if (destroyAfterInteraction)
         {

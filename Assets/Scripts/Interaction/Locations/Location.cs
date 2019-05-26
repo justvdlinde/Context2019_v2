@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Location : MonoBehaviour, IInteractable
 {
@@ -10,14 +11,19 @@ public class Location : MonoBehaviour, IInteractable
     public bool HideAtStart => false;
     public bool DestroyAfterInteraction => false;
 
+    public Action InteractionStartEvent { get; set; }
+    public Action InteractionStopEvent { get; set; }
+
     public void OnInteractionStart()
     {
         OnSelectChange(true);
+        InteractionStartEvent?.Invoke();
     }
 
     public void OnInteractionStop()
     {
         OnSelectChange(false);
+        InteractionStopEvent?.Invoke();
     }
 
     private void OnSelectChange(bool selected)

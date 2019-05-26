@@ -16,7 +16,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -5399,7 +5399,9 @@ GameObject:
   - component: {fileID: 7784151407907074505}
   - component: {fileID: 5190083962632551728}
   - component: {fileID: 3788517333810109040}
+  - component: {fileID: 8981153397201065767}
   - component: {fileID: 1226553476382078894}
+  - component: {fileID: 1130734439}
   m_Layer: 0
   m_Name: Kannon
   m_TagString: Untagged
@@ -5451,10 +5453,39 @@ BoxCollider:
   m_GameObject: {fileID: 7784151407907074506}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 0.53, y: 1.38, z: 1.59}
-  m_Center: {x: 0, y: 0, z: -0.17}
+  m_Size: {x: 0.53, y: 1.38, z: 1.96}
+  m_Center: {x: 0, y: 0.23, z: 0.44}
+--- !u!114 &8981153397201065767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784151407907074506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48eb5c12284285f47aef47d7aebf18c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flag: -17648
+  onFlagAddedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3788517333810109040}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1226553476382078894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5481,13 +5512,49 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1636392874623684696}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  interactionStopEvent:
+  interactionStopUnityEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1130734439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784151407907074506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2edd76bed96ff6943b1498c8dcd76fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionStartFlag: -17778
+  interactionStopFlag: 0
 --- !u!1 &7980412765274855645
 GameObject:
   m_ObjectHideFlags: 0
@@ -5852,6 +5919,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6934145960329728323, guid: d94d0e277335b5040bee6a0159c08b59,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934145959944427507, guid: d94d0e277335b5040bee6a0159c08b59,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934145959960874150, guid: d94d0e277335b5040bee6a0159c08b59,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934145959971793849, guid: d94d0e277335b5040bee6a0159c08b59,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934145959805014128, guid: d94d0e277335b5040bee6a0159c08b59,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934145961547212596, guid: d94d0e277335b5040bee6a0159c08b59,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6934145961547212596, guid: d94d0e277335b5040bee6a0159c08b59,
         type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key1.a
@@ -5871,6 +5968,31 @@ PrefabInstance:
         type: 3}
       propertyPath: ColorModule.gradient.maxGradient.m_NumAlphaKeys
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934145961543660277, guid: d94d0e277335b5040bee6a0159c08b59,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934145961399848117, guid: d94d0e277335b5040bee6a0159c08b59,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934145961691946830, guid: d94d0e277335b5040bee6a0159c08b59,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934145961179398450, guid: d94d0e277335b5040bee6a0159c08b59,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494693590709261892, guid: d94d0e277335b5040bee6a0159c08b59,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d94d0e277335b5040bee6a0159c08b59, type: 3}

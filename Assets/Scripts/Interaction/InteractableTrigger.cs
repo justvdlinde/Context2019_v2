@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -11,16 +12,21 @@ public class InteractableTrigger : MonoBehaviour, IInteractable
     public bool HideAtStart => true;
     public bool DestroyAfterInteraction => false;
 
+    public Action InteractionStartEvent { get; set; }
+    public Action InteractionStopEvent { get; set; }
+
     [SerializeField] private UnityEvent interactionStartEvent;
-    [SerializeField] private UnityEvent interactionStopEvent;
+    [SerializeField] private UnityEvent interactionStopUnityEvent;
 
     public void OnInteractionStart()
     {
+        InteractionStartEvent?.Invoke();
         interactionStartEvent.Invoke();
     }
 
     public void OnInteractionStop()
     {
-        interactionStopEvent.Invoke();
+        InteractionStartEvent?.Invoke();
+        interactionStopUnityEvent.Invoke();
     }
 }

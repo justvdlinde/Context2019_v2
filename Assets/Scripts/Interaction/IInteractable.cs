@@ -1,10 +1,13 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public interface IInteractable 
 {
+    Action InteractionStartEvent { get; set; }
+    Action InteractionStopEvent { get; set; }
+
     GameObject GameObject { get; }
     Collider Collider { get; }
-
     bool HideAtStart { get; }
     bool DestroyAfterInteraction { get; }
 

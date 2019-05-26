@@ -1,36 +1,33 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using ServiceLocatorNamespace;
 using UnityEngine;
-using UnityEngine.Events;
-using ServiceLocatorNamespace;
 
-[RequireComponent(typeof(InteractableItem))]
+[RequireComponent(typeof(IInteractable))]
 public class ScenarioItemInteractionTrigger : MonoBehaviour
 {
     [SerializeField, ScenarioFlag] private int interactionStartFlag;
     [SerializeField, ScenarioFlag] private int interactionStopFlag;
 
-    [SerializeField, HideInInspector] private InteractableItem item;
+    [SerializeField, HideInInspector] private IInteractable interactableObject;
 
     private ScenarioFlagsService service;
 
     private void OnValidate()
     {
-        item = GetComponent<InteractableItem>();
+        interactableObject = gameObject.GetInterface<IInteractable>();
     }
 
     private void OnEnable()
     {
         service = ServiceLocator.Instance.Get<ScenarioFlagsService>() as ScenarioFlagsService;
 
-        item.InteractionStart += TriggerInteractionStartEvent;
-        item.InteractionStop += TriggerInteractionStopEvent;
+        interactableObject.InteractionStartEvent += TriggerInteractionStartEvent;
+        interactableObject.InteractionStopEvent += TriggerInteractionStopEvent;
     }
 
     private void OnDisable()
     {
-        item.InteractionStart -= TriggerInteractionStartEvent;
-        item.InteractionStop -= TriggerInteractionStopEvent;
+        interactableObject.InteractionStartEvent -= TriggerInteractionStartEvent;
+        interactableObject.InteractionStopEvent -= TriggerInteractionStopEvent;
     }
 
     private void TriggerInteractionStartEvent()

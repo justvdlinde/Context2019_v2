@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 0
+    m_Start: 1.4
     m_ClipIn: 0
     m_Asset: {fileID: -7208375816062518805}
     m_Duration: 2.2689166666666667
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e4776a9ffb2fd3458f73514cbf20ad9, type: 3}
   m_Name: Timeline Flag Marker
   m_EditorClassIdentifier: 
-  m_Time: 9.5
+  m_Time: 6.285416666666666
   scenarioFlag: -128896
 --- !u!114 &3958372100563211006
 MonoBehaviour:
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 3.4166666666666665
+    m_Start: 4.183333333333334
     m_ClipIn: 0
     m_Asset: {fileID: -2881940793302004043}
     m_Duration: 2.1020833333333333
