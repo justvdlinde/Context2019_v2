@@ -106,8 +106,8 @@ public class InteractableItemViewer : MonoBehaviour
             // TODO: refactor this to be cleaner
             if (Input.touchCount > 0)
             {
-                horizontalDelta = Input.touches[0].deltaPosition.x;
-                verticalDelta = Input.touches[0].deltaPosition.y;
+                horizontalDelta = Input.touches[0].deltaPosition.x * Time.deltaTime;
+                verticalDelta = Input.touches[0].deltaPosition.y * Time.deltaTime;
                 rotateSpeed = rotateSpeedMobile;
             } 
             else
