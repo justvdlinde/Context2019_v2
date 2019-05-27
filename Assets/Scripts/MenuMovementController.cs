@@ -5,24 +5,19 @@ using UnityEngine.EventSystems;
 
 public class MenuMovementController : MonoBehaviour
 {
-    // Orbit
-    public Transform target;
-    public Vector3 tempOffset;
-    public float distance = 5.0f;
-    public float maxDistance = 20;
-    public float minDistance = .6f;
-    public float xSpeed = 200.0f;
-    public float ySpeed = 200.0f;
-    public int yMinLimit = -80;
-    public int yMaxLimit = 80;
-    public int zoomRate = 40;
-    public float panSpeed = 0.3f;
-    public float zoomDampening = 5.0f;
+    [SerializeField] private Transform target;
+    [SerializeField] private IntMinMax distanceLimit;
+    [SerializeField] private float horizontalRotationSpeed = 200f;
+    [SerializeField] private float verticalRotationSpeed = 200f;
+    [SerializeField] private IntMinMax verticalRotationLimit;
+    [SerializeField] private int zoomRate = 40;
+    [SerializeField] private float zoomDampening = 5f;
+    [SerializeField] private float minFloorPosition = 5f;
 
-    public float xDeg = 0.0f;
-    public float yDeg = 0.0f;
-    public float currentDistance;
-    public float desiredZoomDistance;
+    private float horizontalDegree;
+    private float verticalDegree;
+    private float currentZoomDistance;
+    private float desiredZoomDistance;
     private Quaternion currentRotation;
     private Quaternion desiredRotation;
     private Quaternion rotation;
@@ -30,47 +25,58 @@ public class MenuMovementController : MonoBehaviour
 
     void Start()
     {
+        target.SetParent(null);
         Init();
     }
 
     public void Init()
     {
-        distance = Vector3.Distance(transform.position, target.position);
-        currentDistance = distance;
+        float distance = Vector3.Distance(transform.position, target.position);
+        currentZoomDistance = distance;
         desiredZoomDistance = distance;
 
-        //be sure to grab the current rotations as starting points.
         position = transform.position;
         rotation = transform.rotation;
         currentRotation = transform.rotation;
         desiredRotation = transform.rotation;
 
-        xDeg = Vector3.Angle(Vector3.right, transform.right);
-        yDeg = Vector3.Angle(Vector3.up, transform.up);
+        horizontalDegree = Vector3.Angle(Vector3.right, transform.right);
+        verticalDegree = Vector3.Angle(Vector3.up, transform.up);
     }
-
 
     void LateUpdate()
     {
-        // Orbit
+        Orbit();
+        Zoom();
+
+        //if (transform.position.y < minFloorPosition)
+        //{
+        //    transform.position = new Vector3(transform.position.x, minFloorPosition, transform.position.z);
+        //}
+    }
+
+    private void Orbit()
+    {
         if (Input.GetMouseButton(1))
         {
-            xDeg += Input.GetAxis("Mouse X") * xSpeed * 0.02f;
-            yDeg -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
-            yDeg = ClampAngle(yDeg, yMinLimit, yMaxLimit);
+            horizontalDegree += Input.GetAxis("Mouse X") * horizontalRotationSpeed * 0.02f;
+            verticalDegree -= Input.GetAxis("Mouse Y") * verticalRotationSpeed * 0.02f;
+            verticalDegree = ClampAngle(verticalDegree, verticalRotationLimit.min, verticalRotationLimit.max);
         }
 
-        desiredRotation = Quaternion.Euler(yDeg, xDeg, 0);
-        currentRotation = transform.rotation; 
+        desiredRotation = Quaternion.Euler(verticalDegree, horizontalDegree, 0);
+        currentRotation = transform.rotation;
         rotation = Quaternion.Lerp(currentRotation, desiredRotation, Time.deltaTime * zoomDampening);
-
-        // Zoom:
-        desiredZoomDistance -= Input.GetAxis("Mouse ScrollWheel") * Time.deltaTime * zoomRate * Mathf.Abs(desiredZoomDistance);
-        desiredZoomDistance = Mathf.Clamp(desiredZoomDistance, minDistance, maxDistance);
-        currentDistance = Mathf.Lerp(currentDistance, desiredZoomDistance, Time.deltaTime * zoomDampening);
-        position = target.position - (rotation * Vector3.forward * currentDistance);
-
         transform.rotation = rotation;
+    }
+
+    private void Zoom()
+    {
+        desiredZoomDistance -= Input.GetAxis("Mouse ScrollWheel") * Time.deltaTime * zoomRate * Mathf.Abs(desiredZoomDistance);
+        desiredZoomDistance = Mathf.Clamp(desiredZoomDistance, distanceLimit.min, distanceLimit.max);
+        currentZoomDistance = Mathf.Lerp(currentZoomDistance, desiredZoomDistance, Time.deltaTime * zoomDampening);
+        position = target.position - (rotation * Vector3.forward * currentZoomDistance);
+
         transform.position = position;
     }
 
