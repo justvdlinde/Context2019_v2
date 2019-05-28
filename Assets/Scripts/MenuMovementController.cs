@@ -5,73 +5,79 @@ using UnityEngine.EventSystems;
 
 public class MenuMovementController : MonoBehaviour
 {
-    // Orbit
-    public Transform target;
-    public Vector3 tempOffset;
-    public float distance = 5.0f;
-    public float maxDistance = 20;
-    public float minDistance = .6f;
-    public float xSpeed = 200.0f;
-    public float ySpeed = 200.0f;
-    public int yMinLimit = -80;
-    public int yMaxLimit = 80;
-    public int zoomRate = 40;
-    public float panSpeed = 0.3f;
-    public float zoomDampening = 5.0f;
+    [SerializeField] private Transform camTransform;
+    [SerializeField] private Transform target;
+    [SerializeField] private IntMinMax distanceLimit;
+    [SerializeField] private float horizontalRotationSpeed = 200f;
+    [SerializeField] private float verticalRotationSpeed = 200f;
+    [SerializeField] private IntMinMax verticalRotationLimit;
+    [SerializeField] private int zoomRate = 40;
+    [SerializeField] private float zoomDampening = 5f;
+    [SerializeField] private float minVerticalDegree = 2f;
 
-    public float xDeg = 0.0f;
-    public float yDeg = 0.0f;
-    public float currentDistance;
-    public float desiredZoomDistance;
+    private float horizontalDegree;
+    private float verticalDegree;
+    private float currentZoomDistance;
+    private float desiredZoomDistance;
     private Quaternion currentRotation;
     private Quaternion desiredRotation;
     private Quaternion rotation;
     private Vector3 position;
 
+    private IPlayerInput playerInput;
+
     void Start()
     {
+        playerInput = (ServiceLocatorNamespace.ServiceLocator.Instance.Get<PlayerInputService>() as PlayerInputService).Input;
         Init();
     }
 
     public void Init()
     {
-        distance = Vector3.Distance(transform.position, target.position);
-        currentDistance = distance;
+        float distance = Vector3.Distance(camTransform.position, target.position);
+        currentZoomDistance = distance;
         desiredZoomDistance = distance;
 
-        //be sure to grab the current rotations as starting points.
-        position = transform.position;
-        rotation = transform.rotation;
-        currentRotation = transform.rotation;
-        desiredRotation = transform.rotation;
+        position = camTransform.position;
+        rotation = camTransform.rotation;
+        currentRotation = camTransform.rotation;
+        desiredRotation = camTransform.rotation;
 
-        xDeg = Vector3.Angle(Vector3.right, transform.right);
-        yDeg = Vector3.Angle(Vector3.up, transform.up);
+        horizontalDegree = Vector3.Angle(Vector3.right, camTransform.right);
+        verticalDegree = Vector3.Angle(Vector3.up, camTransform.up);
     }
 
-
-    void LateUpdate()
+    private void LateUpdate()
     {
-        // Orbit
-        if (Input.GetMouseButton(1))
+        Orbit();
+        Zoom();
+    }
+
+    private void Orbit()
+    {
+        if (playerInput.IsPressed)
         {
-            xDeg += Input.GetAxis("Mouse X") * xSpeed * 0.02f;
-            yDeg -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
-            yDeg = ClampAngle(yDeg, yMinLimit, yMaxLimit);
+            horizontalDegree += playerInput.PositionDelta.x * horizontalRotationSpeed * 0.02f;
+            verticalDegree -= playerInput.PositionDelta.y * verticalRotationSpeed * 0.02f;
+            verticalDegree = ClampAngle(verticalDegree, verticalRotationLimit.min, verticalRotationLimit.max);
+            verticalDegree = Mathf.Clamp(verticalDegree, minVerticalDegree, 360);
         }
 
-        desiredRotation = Quaternion.Euler(yDeg, xDeg, 0);
-        currentRotation = transform.rotation; 
+        desiredRotation = Quaternion.Euler(verticalDegree, horizontalDegree, 0);
+        currentRotation = camTransform.rotation;
         rotation = Quaternion.Lerp(currentRotation, desiredRotation, Time.deltaTime * zoomDampening);
 
-        // Zoom:
-        desiredZoomDistance -= Input.GetAxis("Mouse ScrollWheel") * Time.deltaTime * zoomRate * Mathf.Abs(desiredZoomDistance);
-        desiredZoomDistance = Mathf.Clamp(desiredZoomDistance, minDistance, maxDistance);
-        currentDistance = Mathf.Lerp(currentDistance, desiredZoomDistance, Time.deltaTime * zoomDampening);
-        position = target.position - (rotation * Vector3.forward * currentDistance);
+        camTransform.rotation = rotation;
+    }
 
-        transform.rotation = rotation;
-        transform.position = position;
+    private void Zoom()
+    {
+        desiredZoomDistance -= playerInput.ZoomDelta * Time.deltaTime * zoomRate * Mathf.Abs(desiredZoomDistance);
+        desiredZoomDistance = Mathf.Clamp(desiredZoomDistance, distanceLimit.min, distanceLimit.max);
+        currentZoomDistance = Mathf.Lerp(currentZoomDistance, desiredZoomDistance, Time.deltaTime * zoomDampening);
+        position = target.position - (rotation * Vector3.forward * currentZoomDistance);
+
+        camTransform.position = position;
     }
 
     private static float ClampAngle(float angle, float min, float max)

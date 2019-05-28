@@ -10,7 +10,7 @@ using ServiceLocatorNamespace;
 public class InteractableItemViewer : MonoBehaviour
 {
     [Header("Dependencies")]
-    [SerializeField] private InteractionHandler input;
+    [SerializeField] private InteractionHandler interactionHandler;
     [SerializeField] private ItemViewerUI itemUI;
 
     [Header("Object References")]
@@ -29,6 +29,7 @@ public class InteractableItemViewer : MonoBehaviour
     private int itemOriginalLayer;
 
     private ItemDatabaseService itemDatabase;
+    private IPlayerInput playerInput;
 
     private void Start()
     {
@@ -36,17 +37,18 @@ public class InteractableItemViewer : MonoBehaviour
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
 
-        itemDatabase = (ItemDatabaseService)ServiceLocator.Instance.Get<ItemDatabaseService>();
+        itemDatabase = ServiceLocator.Instance.Get<ItemDatabaseService>() as ItemDatabaseService;
+        playerInput = (ServiceLocator.Instance.Get<PlayerInputService>() as PlayerInputService).Input;
     }
 
     private void OnEnable()
     {
-        input.InteractedWithObjectEvent += OnInteracedWithObjectEvent;
+        interactionHandler.InteractedWithObjectEvent += OnInteracedWithObjectEvent;
     }
 
     private void OnDisable()
     {
-        input.InteractedWithObjectEvent -= OnInteracedWithObjectEvent;
+        interactionHandler.InteractedWithObjectEvent -= OnInteracedWithObjectEvent;
     }
 
     private void Update()
@@ -74,7 +76,7 @@ public class InteractableItemViewer : MonoBehaviour
 
     private void StartViewing(InteractableItem item)
     {
-        input.SetActive(false);
+        interactionHandler.SetActive(false);
 
         isViewing = true;
         interactableItem = item;
@@ -96,34 +98,16 @@ public class InteractableItemViewer : MonoBehaviour
 
     private void View()
     {
-        // TODO: refactor to be more multiplatform
-        if (Input.GetMouseButton(0))
+        if (playerInput.IsPressed)
         {
-            float horizontalDelta = 0;
-            float verticalDelta = 0;
-            float rotateSpeed = this.rotateSpeed;
-
-            // TODO: refactor this to be cleaner
-            if (Input.touchCount > 0)
-            {
-                horizontalDelta = Input.touches[0].deltaPosition.x;
-                verticalDelta = Input.touches[0].deltaPosition.y;
-                rotateSpeed = rotateSpeedMobile;
-            } 
-            else
-            {
-                horizontalDelta = Input.GetAxis("Mouse X");
-                verticalDelta = Input.GetAxis("Mouse Y");
-            }
-
             Vector3 relativeUp = Camera.main.transform.TransformDirection(Vector3.up);
             Vector3 relativeRight = Camera.main.transform.TransformDirection(Vector3.right);
 
             Vector3 objectRelativeUp = itemContainer.transform.InverseTransformDirection(relativeUp);
             Vector3 objectRelaviveRight = itemContainer.transform.InverseTransformDirection(relativeRight);
 
-            Quaternion extraRotation = Quaternion.AngleAxis(-horizontalDelta / itemContainer.transform.localScale.x * rotateSpeed, objectRelativeUp)
-                                        * Quaternion.AngleAxis(verticalDelta / itemContainer.transform.localScale.y * rotateSpeed, objectRelaviveRight);
+            Quaternion extraRotation = Quaternion.AngleAxis(-playerInput.PositionDelta.x / itemContainer.transform.localScale.x * rotateSpeed, objectRelativeUp)
+                                        * Quaternion.AngleAxis(playerInput.PositionDelta.y / itemContainer.transform.localScale.y * rotateSpeed, objectRelaviveRight);
 
             itemContainer.rotation = itemContainer.transform.rotation * extraRotation;
         }
@@ -140,7 +124,7 @@ public class InteractableItemViewer : MonoBehaviour
         else
         {
             camera.gameObject.SetActive(false);
-            input.SetActive(true);
+            interactionHandler.SetActive(true);
         }
 
         itemContainer.rotation = Quaternion.identity;
@@ -193,6 +177,6 @@ public class InteractableItemViewer : MonoBehaviour
         itemTransform.gameObject.layer = itemOriginalLayer;
         camera.gameObject.SetActive(false);
 
-        input.SetActive(true);
+        interactionHandler.SetActive(true);
     }
 }
