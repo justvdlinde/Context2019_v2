@@ -33,9 +33,9 @@ public class InteractableItemViewer : MonoBehaviour
 
     private void Start()
     {
-        transform.SetParent(Camera.main.transform);
-        transform.localPosition = Vector3.zero;
-        transform.localRotation = Quaternion.identity;
+        //transform.SetParent(Camera.main.transform);
+        //transform.localPosition = Vector3.zero;
+        //transform.localRotation = Quaternion.identity;
 
         itemDatabase = ServiceLocator.Instance.Get<ItemDatabaseService>() as ItemDatabaseService;
         playerInput = (ServiceLocator.Instance.Get<PlayerInputService>() as PlayerInputService).Input;
@@ -56,6 +56,19 @@ public class InteractableItemViewer : MonoBehaviour
         if (isViewing)
         {
             View();
+        }
+    }
+
+    private void LateUpdate()
+    {
+        if (Camera.main != null)
+        {
+            transform.position = Camera.main.transform.position;
+            transform.rotation = Camera.main.transform.rotation;
+        }
+        else
+        {
+            Debug.LogWarning("No Main Camera found!");
         }
     }
 
@@ -84,7 +97,7 @@ public class InteractableItemViewer : MonoBehaviour
 
         StartCoroutine(LerpItemIntoView(item));
 
-        camera.gameObject.SetActive(true);
+        camera.enabled = true;
 
         SetUI(itemDatabase.GetItemData(item.ID));
 
@@ -100,8 +113,8 @@ public class InteractableItemViewer : MonoBehaviour
     {
         if (playerInput.IsPressed)
         {
-            Vector3 relativeUp = Camera.main.transform.TransformDirection(Vector3.up);
-            Vector3 relativeRight = Camera.main.transform.TransformDirection(Vector3.right);
+            Vector3 relativeUp = camera.transform.TransformDirection(Vector3.up);
+            Vector3 relativeRight = camera.transform.TransformDirection(Vector3.right);
 
             Vector3 objectRelativeUp = itemContainer.transform.InverseTransformDirection(relativeUp);
             Vector3 objectRelaviveRight = itemContainer.transform.InverseTransformDirection(relativeRight);
@@ -123,7 +136,7 @@ public class InteractableItemViewer : MonoBehaviour
         }
         else
         {
-            camera.gameObject.SetActive(false);
+            camera.enabled = false;
             interactionHandler.SetActive(true);
         }
 
@@ -175,8 +188,7 @@ public class InteractableItemViewer : MonoBehaviour
 
         itemTransform.SetFromData(itemOriginalTransformData);
         itemTransform.gameObject.layer = itemOriginalLayer;
-        camera.gameObject.SetActive(false);
-
+        camera.enabled = false;
         interactionHandler.SetActive(true);
     }
 }
