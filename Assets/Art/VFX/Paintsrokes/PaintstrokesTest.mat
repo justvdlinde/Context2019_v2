@@ -10,7 +10,7 @@ Material:
   m_Name: PaintstrokesTest
   m_Shader: {fileID: 4800000, guid: ac4771d391851054f9fb1c3116f5edc7, type: 3}
   m_ShaderKeywords: 
-  m_LightmapFlags: 0
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 3000
@@ -19,6 +19,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BotTexture0:
+        m_Texture: {fileID: 2800000, guid: cf69270cca6309c48976da7a53b065fc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -47,6 +51,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MidTexture0:
+        m_Texture: {fileID: 2800000, guid: f03ee5c31a543524eb0c660be00174c7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Normal1:
         m_Texture: {fileID: 2800000, guid: f01e788803a708440b0bb200c1660f30, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -63,12 +71,16 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 2800000, guid: f01e788803a708440b0bb200c1660f30, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _TextureSample1:
         m_Texture: {fileID: 2800000, guid: dd2fd2df93418444c8e280f1d34deeb5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TopTexture0:
-        m_Texture: {fileID: 2800000, guid: 10ff51d2d87fb7b46b70b55f8551c146, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0bebe40e9ebbecc48b8e9cfea982da7e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
@@ -79,15 +91,17 @@ Material:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DepthBlend: 1
-    - _DepthDistortion: 0.4
+    - _DepthDistortion: 2.81
     - _DetailNormalMapScale: 1
     - _DistortStrength: 0.02
     - _DistortStrength2: 0
     - _DstBlend: 0
-    - _Float0: 0.06
+    - _Float0: 0.038
+    - _Float1: 1.08
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _Intensity: 0.019
     - _Metallic: 0
     - _Mode: 0
     - _NormalScale: 2.73

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3334358}
   - component: {fileID: 2311442}
   - component: {fileID: 6492484}
-  - component: {fileID: 7928967824137303621}
   m_Layer: 0
   m_Name: vase.002
   m_TagString: Untagged
@@ -70,7 +69,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
+  m_StitchLightmapSeams: 1
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -90,21 +89,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: f477ea474e1cd4d40af24243669f82d8, type: 3}
---- !u!114 &7928967824137303621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 164382}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89c8548597304994ea895aa4fd43f726, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 0
-  gObject: {fileID: 164382}
-  collider: {fileID: 6492484}
