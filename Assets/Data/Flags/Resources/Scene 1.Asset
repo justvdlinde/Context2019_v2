@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sequence 2 Started
   m_EditorClassIdentifier: 
   description: No description
-  isChecked: 0
+  isChecked: 1
   hash: -73532
 --- !u!114 &-1811820944821996248
 MonoBehaviour:
@@ -28,7 +28,7 @@ MonoBehaviour:
   m_Name: Sequence 1 Completed
   m_EditorClassIdentifier: 
   description: No description
-  isChecked: 0
+  isChecked: 1
   hash: 18080
 --- !u!114 &11400000
 MonoBehaviour:
@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Name: Collected Ledger
   m_EditorClassIdentifier: 
   description: No description
-  isChecked: 0
+  isChecked: 1
   hash: 18078
 --- !u!114 &6525376043997909056
 MonoBehaviour:
@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Name: Sequence 2 Completed
   m_EditorClassIdentifier: 
   description: No description
-  isChecked: 0
+  isChecked: 1
   hash: -75868
 --- !u!114 &6827445475175680854
 MonoBehaviour:
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Name: Sequence 1 Started
   m_EditorClassIdentifier: 
   description: No description
-  isChecked: 0
+  isChecked: 1
   hash: 18082
 --- !u!114 &8083110503157907009
 MonoBehaviour:
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Name: Sequence 3 Started
   m_EditorClassIdentifier: 
   description: No description
-  isChecked: 0
+  isChecked: 1
   hash: 18086
 --- !u!114 &9032276973572748261
 MonoBehaviour:
@@ -123,5 +123,5 @@ MonoBehaviour:
   m_Name: Sequence 3 Completed
   m_EditorClassIdentifier: 
   description: No description
-  isChecked: 0
+  isChecked: 1
   hash: 18084
