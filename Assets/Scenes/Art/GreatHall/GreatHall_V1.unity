@@ -718,7 +718,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PlayableAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 4dd90788169106048a9362cbb5a24f59,
+      objectReference: {fileID: 11400000, guid: 53be4322896528d488b3cc38a7630dba,
         type: 2}
     - target: {fileID: 7725471577737668171, guid: f4e445331881f9944b0b38e106e1043c,
         type: 3}
@@ -1901,6 +1901,32 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: -0.7120351
       objectReference: {fileID: 0}
+    - target: {fileID: 7725471577415768295, guid: f4e445331881f9944b0b38e106e1043c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725471576994493022, guid: f4e445331881f9944b0b38e106e1043c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.314
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725471577415768294, guid: f4e445331881f9944b0b38e106e1043c,
+        type: 3}
+      propertyPath: triggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725471577415768294, guid: f4e445331881f9944b0b38e106e1043c,
+        type: 3}
+      propertyPath: triggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Playables.PlayableAsset, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725471577415768294, guid: f4e445331881f9944b0b38e106e1043c,
+        type: 3}
+      propertyPath: triggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: 83809caa3673c454e8212d855e51394e,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e445331881f9944b0b38e106e1043c, type: 3}
 --- !u!1 &12561803
@@ -10269,12 +10295,12 @@ PrefabInstance:
     - target: {fileID: 4663675219156114780, guid: 44319b856e6385f409d6b50b7f5838b5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 50.000004
+      value: 50.000008
       objectReference: {fileID: 0}
     - target: {fileID: 342785533967262252, guid: 44319b856e6385f409d6b50b7f5838b5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 45.50391
+      value: 45.503914
       objectReference: {fileID: 0}
     - target: {fileID: 342785533967262252, guid: 44319b856e6385f409d6b50b7f5838b5,
         type: 3}
@@ -10284,17 +10310,17 @@ PrefabInstance:
     - target: {fileID: 8222001195389194316, guid: 44319b856e6385f409d6b50b7f5838b5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 50.000004
+      value: 50.000008
       objectReference: {fileID: 0}
     - target: {fileID: 6471901616698390437, guid: 44319b856e6385f409d6b50b7f5838b5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 50.000004
+      value: 50.000008
       objectReference: {fileID: 0}
     - target: {fileID: 5515855309809169935, guid: 44319b856e6385f409d6b50b7f5838b5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 50
+      value: 50.000008
       objectReference: {fileID: 0}
     - target: {fileID: 5515855309809169935, guid: 44319b856e6385f409d6b50b7f5838b5,
         type: 3}
@@ -10304,7 +10330,7 @@ PrefabInstance:
     - target: {fileID: 1394413262193682876, guid: 44319b856e6385f409d6b50b7f5838b5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 50.000004
+      value: 50.000008
       objectReference: {fileID: 0}
     - target: {fileID: 1394413262193682876, guid: 44319b856e6385f409d6b50b7f5838b5,
         type: 3}
@@ -10314,7 +10340,7 @@ PrefabInstance:
     - target: {fileID: 930692024803017639, guid: 44319b856e6385f409d6b50b7f5838b5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -100
+      value: -100.00001
       objectReference: {fileID: 0}
     - target: {fileID: 3474369386715023698, guid: 44319b856e6385f409d6b50b7f5838b5,
         type: 3}
@@ -15880,7 +15906,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1179478004}
-  - component: {fileID: 1179478003}
   - component: {fileID: 1179478002}
   m_Layer: 0
   m_Name: Post-process Volume
@@ -15906,19 +15931,6 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
---- !u!65 &1179478003
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1179478001}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1179478004
 Transform:
   m_ObjectHideFlags: 0

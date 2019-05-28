@@ -12,7 +12,6 @@ public class InGameUI : MonoBehaviour
 
     [SerializeField] private GameObject sidebarRoot;
     [SerializeField] private TextMeshProUGUI location;
-    [SerializeField] private TextMeshProUGUI date;
     [SerializeField] private Button homeButton;
     [SerializeField] private Button replayButton;
     [SerializeField] private Toggle pauseButton;
