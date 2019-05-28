@@ -25,23 +25,6 @@ MonoBehaviour:
     m_Objects:
     - {fileID: -1859380134411838838}
     - {fileID: 3568319561034018826}
---- !u!114 &-6325596949732516992
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
-  m_Name: AudioPlayableAsset
-  m_EditorClassIdentifier: 
-  m_Clip: {fileID: 8300000, guid: f88c1c82871caa849813abcbbcd65376, type: 3}
-  m_Loop: 0
-  m_bufferingTime: 0.1
-  m_ClipProperties:
-    volume: 1
 --- !u!114 &-1859380134411838838
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -55,7 +38,7 @@ MonoBehaviour:
   m_Name: Timeline Flag Marker
   m_EditorClassIdentifier: 
   m_Time: 0
-  scenarioFlag: -99004
+  scenarioFlag: -102166
 --- !u!114 &-1025070654527949845
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -78,10 +61,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 0
+    m_Start: 0.016666666666666666
     m_ClipIn: 0
-    m_Asset: {fileID: 1199477411378294383}
-    m_Duration: 2.5692291666666667
+    m_Asset: {fileID: 2272627381831003206}
+    m_Duration: 4.2709166666666665
     m_TimeScale: 1
     m_ParentTrack: {fileID: -1025070654527949845}
     m_EaseInDuration: 0
@@ -145,7 +128,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: Voice_Zweder_002
+    m_DisplayName: Voice_Visvrouw_001
   m_Markers:
     m_Objects: []
   m_TrackProperties:
@@ -174,10 +157,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 3
+    m_Start: 4.75
     m_ClipIn: 0
-    m_Asset: {fileID: -6325596949732516992}
-    m_Duration: 0.8675208333333333
+    m_Asset: {fileID: 8603378488367903673}
+    m_Duration: 5.638958333333333
     m_TimeScale: 1
     m_ParentTrack: {fileID: -647869325742393301}
     m_EaseInDuration: 0
@@ -241,7 +224,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: Voice_Johan_007
+    m_DisplayName: Voice_Johan_008
   m_Markers:
     m_Objects: []
   m_TrackProperties:
@@ -258,7 +241,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bfda56da833e2384a9677cd3c976a436, type: 3}
-  m_Name: Sequence 1
+  m_Name: Sequence 2
   m_EditorClassIdentifier: 
   m_Version: 0
   m_Tracks:
@@ -269,7 +252,7 @@ MonoBehaviour:
     m_Framerate: 60
   m_DurationMode: 0
   m_MarkerTrack: {fileID: -8822191066923857224}
---- !u!114 &1199477411378294383
+--- !u!114 &2272627381831003206
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -281,7 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
   m_Name: AudioPlayableAsset
   m_EditorClassIdentifier: 
-  m_Clip: {fileID: 8300000, guid: db721c608315c99458317c72d3d8490c, type: 3}
+  m_Clip: {fileID: 8300000, guid: 79aba1aff7515874987fdc93ecf1dfa3, type: 3}
   m_Loop: 0
   m_bufferingTime: 0.1
   m_ClipProperties:
@@ -325,5 +308,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e4776a9ffb2fd3458f73514cbf20ad9, type: 3}
   m_Name: Timeline Flag Marker
   m_EditorClassIdentifier: 
-  m_Time: 3.8333333333333335
-  scenarioFlag: -100148
+  m_Time: 10.388958333333333
+  scenarioFlag: -105480
+--- !u!114 &8603378488367903673
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
+  m_Name: AudioPlayableAsset
+  m_EditorClassIdentifier: 
+  m_Clip: {fileID: 8300000, guid: e8e45bd899cb6ac418672aab367bcd42, type: 3}
+  m_Loop: 0
+  m_bufferingTime: 0.1
+  m_ClipProperties:
+    volume: 1
