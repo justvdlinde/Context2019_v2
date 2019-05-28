@@ -33,10 +33,6 @@ public class InteractableItemViewer : MonoBehaviour
 
     private void Start()
     {
-        //transform.SetParent(Camera.main.transform);
-        //transform.localPosition = Vector3.zero;
-        //transform.localRotation = Quaternion.identity;
-
         itemDatabase = ServiceLocator.Instance.Get<ItemDatabaseService>() as ItemDatabaseService;
         playerInput = (ServiceLocator.Instance.Get<PlayerInputService>() as PlayerInputService).Input;
     }
@@ -93,7 +89,6 @@ public class InteractableItemViewer : MonoBehaviour
 
         isViewing = true;
         interactableItem = item;
-        item.OnInteractionStart();
 
         StartCoroutine(LerpItemIntoView(item));
 
