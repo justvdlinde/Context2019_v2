@@ -5,8 +5,8 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Main.unity
+  - enabled: 0
+    path: Assets/Scenes/Main New.unity
     guid: 4be2c27140f93ae4a9ee6e599605fc71
   - enabled: 1
     path: Assets/Scenes/Art/GreatHall/GreatHall_V1.unity
