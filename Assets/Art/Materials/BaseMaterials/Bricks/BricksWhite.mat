@@ -89,7 +89,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: ff9da6b9c3ae4e8439ce851c4452c3a0, type: 3}
+        m_Texture: {fileID: 2800000, guid: cd96371da83933a41b65a86ff276ce85, type: 3}
         m_Scale: {x: 20, y: 10}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
@@ -161,7 +161,7 @@ Material:
     - _Cutoff: 0.195
     - _DepthOffsetEnable: 0
     - _DetailAlbedoScale: 1
-    - _DetailNormalMapScale: -4.12
+    - _DetailNormalMapScale: -1.49
     - _DetailNormalScale: 1
     - _DetailSmoothnessScale: 1
     - _DiffusionProfile: 0
