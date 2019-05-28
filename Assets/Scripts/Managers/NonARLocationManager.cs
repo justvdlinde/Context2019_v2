@@ -15,7 +15,7 @@ public class NonARLocationManager : MonoBehaviour
     private void OnGUI()
     {
         for (int i = 0; i < trackableScenes.Length; i++)
-        { 
+        {
             if (GUI.Button(new Rect(i * 150, 10, 150, 50), trackableScenes[i].name))
             {
                 sceneManager.LoadScene(trackableScenes[i].Scene);

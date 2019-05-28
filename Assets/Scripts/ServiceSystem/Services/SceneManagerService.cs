@@ -1,17 +1,21 @@
 ﻿using ServiceLocatorNamespace;
 using System;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class SceneManagerService : MonoBehaviour, MonoService
+public class SceneManagerService : MonoBehaviour, IService
 {
     [SerializeField] private GameObject root;
 
     private void Awake()
     {
-        DontDestroyOnLoad(this);
-        ServiceLocator.Instance.AddService(this);
+        if (ServiceLocator.Instance.ContainsService<ARManagerService>())
+        {
+            Destroy(gameObject);
+            return;
+        }
 
+        ServiceLocator.Instance.AddService(this);
+        DontDestroyOnLoad(this);
         ShowLoadingbar(false);
     }
 
@@ -26,10 +30,5 @@ public class SceneManagerService : MonoBehaviour, MonoService
     {
         enabled = show;
         root.SetActive(show);
-    }
-
-    private void OnDestroy()
-    {
-        ServiceLocator.Instance.RemoveService(this);
     }
 }
