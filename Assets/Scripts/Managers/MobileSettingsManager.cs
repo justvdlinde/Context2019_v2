@@ -6,8 +6,6 @@ public class MobileSettingsManager : MonoBehaviour
 
     private void Start()
     {
-        DontDestroyOnLoad(this);
-
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         Screen.orientation = orientation;
     }

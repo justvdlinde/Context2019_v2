@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbaa4e01ead325c4ebaa37d05259f090, type: 3}
-  m_Name: Outro_Started
+  m_Name: Sequence 2 Started
   m_EditorClassIdentifier: 
   description: No description
   isChecked: 0
@@ -25,7 +25,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbaa4e01ead325c4ebaa37d05259f090, type: 3}
-  m_Name: Intro_Completed
+  m_Name: Sequence 1 Completed
   m_EditorClassIdentifier: 
   description: No description
   isChecked: 0
@@ -40,7 +40,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbaa4e01ead325c4ebaa37d05259f090, type: 3}
-  m_Name: Intro_Started
+  m_Name: Sequence 1 Started
   m_EditorClassIdentifier: 
   description: No description
   isChecked: 0
@@ -55,7 +55,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbaa4e01ead325c4ebaa37d05259f090, type: 3}
-  m_Name: Outro_Completed
+  m_Name: Sequence 2 Completed
   m_EditorClassIdentifier: 
   description: No description
   isChecked: 0
@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbaa4e01ead325c4ebaa37d05259f090, type: 3}
-  m_Name: Cannon_Fired
+  m_Name: Cannon Fired
   m_EditorClassIdentifier: 
   description: No description
   isChecked: 0

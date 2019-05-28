@@ -44,7 +44,6 @@ public class InteractionHandler : MonoBehaviour
     private void InteractableObjectHit(IInteractable interactable)
     {
         InteractedWithObjectEvent?.Invoke(interactable);
-        interactable.OnInteractionStart();
     }
 
     private void OnDrawGizmosSelected()

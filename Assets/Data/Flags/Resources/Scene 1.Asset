@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3228052908136402434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbaa4e01ead325c4ebaa37d05259f090, type: 3}
+  m_Name: Sequence 2 Started
+  m_EditorClassIdentifier: 
+  description: No description
+  isChecked: 1
+  hash: -73532
 --- !u!114 &-1811820944821996248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10,7 +25,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbaa4e01ead325c4ebaa37d05259f090, type: 3}
-  m_Name: Intro_Complete
+  m_Name: Sequence 1 Completed
   m_EditorClassIdentifier: 
   description: No description
   isChecked: 1
@@ -30,9 +45,11 @@ MonoBehaviour:
   collection:
   - {fileID: 6827445475175680854}
   - {fileID: -1811820944821996248}
+  - {fileID: -3228052908136402434}
+  - {fileID: 6525376043997909056}
   - {fileID: 1284461385065628282}
-  - {fileID: 8083110503157907009}
   - {fileID: 9032276973572748261}
+  - {fileID: 8083110503157907009}
 --- !u!114 &1284461385065628282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43,11 +60,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbaa4e01ead325c4ebaa37d05259f090, type: 3}
-  m_Name: Collected_ledger
+  m_Name: Collected Ledger
   m_EditorClassIdentifier: 
   description: No description
   isChecked: 1
   hash: 18078
+--- !u!114 &6525376043997909056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbaa4e01ead325c4ebaa37d05259f090, type: 3}
+  m_Name: Sequence 2 Completed
+  m_EditorClassIdentifier: 
+  description: No description
+  isChecked: 1
+  hash: -75868
 --- !u!114 &6827445475175680854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,7 +90,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbaa4e01ead325c4ebaa37d05259f090, type: 3}
-  m_Name: Intro_Started
+  m_Name: Sequence 1 Started
   m_EditorClassIdentifier: 
   description: No description
   isChecked: 1
@@ -73,7 +105,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbaa4e01ead325c4ebaa37d05259f090, type: 3}
-  m_Name: Outro_Started
+  m_Name: Sequence 3 Started
   m_EditorClassIdentifier: 
   description: No description
   isChecked: 1
@@ -88,7 +120,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbaa4e01ead325c4ebaa37d05259f090, type: 3}
-  m_Name: Outro_Complete
+  m_Name: Sequence 3 Completed
   m_EditorClassIdentifier: 
   description: No description
   isChecked: 1

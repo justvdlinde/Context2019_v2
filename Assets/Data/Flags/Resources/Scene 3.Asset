@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8924044586408184168
+--- !u!114 &-8908027079574025700
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,26 +10,41 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbaa4e01ead325c4ebaa37d05259f090, type: 3}
-  m_Name: Scene 1 Completed
-  m_EditorClassIdentifier: 
-  description: No description
-  isChecked: 1
-  hash: -18282
---- !u!114 &-7592805495407286583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbaa4e01ead325c4ebaa37d05259f090, type: 3}
-  m_Name: Scene 2 Completed
+  m_Name: Sequence 2 Completed
   m_EditorClassIdentifier: 
   description: No description
   isChecked: 0
-  hash: -21260
+  hash: -105480
+--- !u!114 &-6638952926988487988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbaa4e01ead325c4ebaa37d05259f090, type: 3}
+  m_Name: Sequence 1 Started
+  m_EditorClassIdentifier: 
+  description: No description
+  isChecked: 0
+  hash: -99004
+--- !u!114 &-6416888701408072223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbaa4e01ead325c4ebaa37d05259f090, type: 3}
+  m_Name: Gate Raised
+  m_EditorClassIdentifier: 
+  description: No description
+  isChecked: 0
+  hash: -101084
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40,13 +55,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ba0510699ac28348afad3031556c65a, type: 3}
-  m_Name: Global
+  m_Name: Scene 3
   m_EditorClassIdentifier: 
   collection:
-  - {fileID: -8924044586408184168}
-  - {fileID: -7592805495407286583}
-  - {fileID: 7848596298553867417}
---- !u!114 &7848596298553867417
+  - {fileID: -6638952926988487988}
+  - {fileID: 8061142069031891234}
+  - {fileID: -6416888701408072223}
+  - {fileID: 28753955371320800}
+  - {fileID: -8908027079574025700}
+--- !u!114 &28753955371320800
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -56,8 +73,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbaa4e01ead325c4ebaa37d05259f090, type: 3}
-  m_Name: Scene 3 Completed
+  m_Name: Sequence 2 Started
   m_EditorClassIdentifier: 
   description: No description
   isChecked: 0
-  hash: -106782
+  hash: -102166
+--- !u!114 &8061142069031891234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbaa4e01ead325c4ebaa37d05259f090, type: 3}
+  m_Name: Sequence 1 Completed
+  m_EditorClassIdentifier: 
+  description: No description
+  isChecked: 0
+  hash: -100148

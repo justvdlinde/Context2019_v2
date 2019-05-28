@@ -3,7 +3,7 @@ using ServiceLocatorNamespace;
 using System;
 using UnityEngine;
 
-public class ARManagerService : MonoBehaviour, MonoService
+public class ARManagerService : MonoBehaviour, IService
 {
     public Action<TrackedImageObject> NewImageTrackedEvent;
 
@@ -12,8 +12,15 @@ public class ARManagerService : MonoBehaviour, MonoService
     [SerializeField] private ImageTrackingController sessionController;
     [SerializeField] private ARCoreBackgroundRenderer backgroundRenderer;
 
-    private void Start()
+    private void Awake()
     {
+        if(ServiceLocator.Instance.ContainsService<ARManagerService>())
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        ServiceLocator.Instance.AddService(this);
         DontDestroyOnLoad(this);
     }
 
@@ -30,16 +37,5 @@ public class ARManagerService : MonoBehaviour, MonoService
             backgroundRenderer.m_BackgroundRenderer.mode = UnityEngine.XR.ARRenderMode.MaterialAsBackground;
         }
 #endif
-    }
-
-    private void Awake()
-    {
-        ServiceLocator.Instance.AddService(this);
-        Debug.Log("added service " + this);
-    }
-
-    private void OnDestroy()
-    {
-        ServiceLocator.Instance.RemoveService(this);
     }
 }
