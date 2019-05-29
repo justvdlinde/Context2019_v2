@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbaa4e01ead325c4ebaa37d05259f090, type: 3}
-  m_Name: Scene_1_Completed
+  m_Name: Scene 1 Completed
   m_EditorClassIdentifier: 
   description: No description
   isChecked: 1
@@ -25,7 +25,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbaa4e01ead325c4ebaa37d05259f090, type: 3}
-  m_Name: Scene_2_Completed
+  m_Name: Scene 2 Completed
   m_EditorClassIdentifier: 
   description: No description
   isChecked: 0
@@ -45,3 +45,19 @@ MonoBehaviour:
   collection:
   - {fileID: -8924044586408184168}
   - {fileID: -7592805495407286583}
+  - {fileID: 7848596298553867417}
+--- !u!114 &7848596298553867417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbaa4e01ead325c4ebaa37d05259f090, type: 3}
+  m_Name: Scene 3 Completed
+  m_EditorClassIdentifier: 
+  description: No description
+  isChecked: 0
+  hash: -106782

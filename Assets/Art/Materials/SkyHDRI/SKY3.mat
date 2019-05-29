@@ -90,7 +90,7 @@ Material:
     - _MirrorOnBack: 0
     - _OcclusionStrength: 1
     - _ReceiveShadows: 1
-    - _Rotation: 23
+    - _Rotation: 48
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1

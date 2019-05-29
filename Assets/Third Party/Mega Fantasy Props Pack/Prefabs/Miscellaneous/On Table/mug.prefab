@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 423048}
   - component: {fileID: 3378016}
   - component: {fileID: 2340740}
-  - component: {fileID: 6804371948846725004}
-  - component: {fileID: 6195522435969180746}
+  - component: {fileID: 6416222}
   m_Layer: 0
   m_Name: mug
   m_TagString: Untagged
@@ -70,7 +69,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
+  m_StitchLightmapSeams: 1
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -79,8 +78,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &6804371948846725004
-BoxCollider:
+--- !u!64 &6416222
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -89,21 +88,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.13, y: 0.17779052, z: 0.13718483}
-  m_Center: {x: 0, y: 0.08889526, z: -0.0000000037252903}
---- !u!114 &6195522435969180746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89c8548597304994ea895aa4fd43f726, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 0
-  gObject: {fileID: 100656}
-  collider: {fileID: 6804371948846725004}
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 37d17dfa176850c45a85a208ca314b33, type: 3}

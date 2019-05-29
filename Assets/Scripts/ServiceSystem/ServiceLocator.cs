@@ -26,9 +26,9 @@ namespace ServiceLocatorNamespace
 
         public Dictionary<Type, IService> InstantiatedServices = new Dictionary<Type, IService>();
 
-        public ServiceLocator()
+        public bool ContainsService<T>() where T : IService
         {
-            // use reflection to retrieve all factories
+            return InstantiatedServices.ContainsKey(typeof(T));
         }
 
         public IService Get<T>() where T : IService
@@ -41,9 +41,9 @@ namespace ServiceLocatorNamespace
             }
             else
             {
-                if (serviceType is MonoService)
+                if (serviceType.IsSubclassOf(typeof(MonoBehaviour)))
                 {
-                    return FindMonoServiceInScene(serviceType as MonoService);
+                    return FindMonoServiceInScene(serviceType);
                 }
                 else
                 {
@@ -52,12 +52,11 @@ namespace ServiceLocatorNamespace
             }
         }
 
-        private IService FindMonoServiceInScene(MonoService serviceType)
+        private IService FindMonoServiceInScene(Type serviceType)
         {
-            Debug.LogWarning("This function slow and is best avoided. Please add the service using ServiceLocator.AddService on Awake and RemoveService on Destroy instead.");
+            Debug.LogWarning("This function is slow and is therefore best avoided. Please add the service using ServiceLocator.AddService on Awake and RemoveService on Destroy instead.");
 
-            Type t = serviceType.GetType().MakeGenericType();
-            UnityEngine.Object service = UnityEngine.Object.FindObjectOfType(t);
+            UnityEngine.Object service = UnityEngine.Object.FindObjectOfType(serviceType);
             if(service == null)
             {
                 Debug.LogErrorFormat("Service of type {0} not found in scene ", serviceType);
