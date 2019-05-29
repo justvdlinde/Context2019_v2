@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fc9e20a2a69c8e340b01dafcc5d70c84
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _StoneTile_normal: {fileID: 2800000, guid: 07e63c4dafc86cc48922c5884a0d5ef3, type: 3}
+  - _StoneTile_basecolor: {fileID: 2800000, guid: 8319c25e639bd544da010d49abd8333c,
+      type: 3}
+  - _DistortNormal: {fileID: 2800000, guid: f01e788803a708440b0bb200c1660f30, type: 3}
+  - _StoneTile_ambientOcclusion: {fileID: 2800000, guid: ea960984568c6a648829251a9468f50e,
+      type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
