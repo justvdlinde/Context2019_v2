@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: FogPlane
   m_Shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _ALPHABLEND_ON _BLENDMODE_ALPHA _EMISSION _SURFACE_TYPE_TRANSPARENT
+  m_ShaderKeywords: _ALPHABLEND_ON _BLENDMODE_ALPHA _SURFACE_TYPE_TRANSPARENT
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -108,8 +108,8 @@ Material:
     - _DistortionVectorBias: -1
     - _DistortionVectorScale: 2
     - _DoubleSidedEnable: 0
-    - _DstBlend: 1
-    - _EmissionEnabled: 1
+    - _DstBlend: 10
+    - _EmissionEnabled: 0
     - _EmissiveExposureWeight: 1
     - _EmissiveIntensity: 1
     - _EmissiveIntensityUnit: 0
@@ -122,7 +122,7 @@ Material:
     - _IncludeIndirectLighting: 1
     - _LightingEnabled: 0
     - _Metallic: 0
-    - _Mode: 4
+    - _Mode: 2
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
