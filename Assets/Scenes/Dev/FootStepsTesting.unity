@@ -499,6 +499,7 @@ MonoBehaviour:
   volumeOffset:
     min: 0
     max: 0
+  audioClips: []
   audioSource: {fileID: 1552832268}
 --- !u!82 &1552832268
 AudioSource:

@@ -305,6 +305,13 @@ MonoBehaviour:
   volumeOffset:
     min: -0.1
     max: 0.1
+  audioClips:
+  - {fileID: 8300000, guid: eecb36815ef712943809f6788cedd686, type: 3}
+  - {fileID: 8300000, guid: 86e462a778b9be74aa34f09d81d61dbd, type: 3}
+  - {fileID: 8300000, guid: 291a34b928434784c96d84ece77eab93, type: 3}
+  - {fileID: 8300000, guid: 6ef178677bbd0634997b0ad72f231636, type: 3}
+  - {fileID: 8300000, guid: c11bfa08623c84e4f959dc098a1df281, type: 3}
+  - {fileID: 8300000, guid: 35b04373876456242b23363774e49d02, type: 3}
   audioSource: {fileID: 1700302594}
 --- !u!1 &761669279723016963
 GameObject:
@@ -2656,6 +2663,13 @@ MonoBehaviour:
   volumeOffset:
     min: -0.1
     max: 0.1
+  audioClips:
+  - {fileID: 8300000, guid: 4bf390b1a86dfd74a8e8483931381652, type: 3}
+  - {fileID: 8300000, guid: 48c7306ed884f0449a292c0bd5d9db6f, type: 3}
+  - {fileID: 8300000, guid: d0170ab18307b5543b0c588101f55760, type: 3}
+  - {fileID: 8300000, guid: c3c01f22c786174459f6a64dfb3e16e6, type: 3}
+  - {fileID: 8300000, guid: 158038bdecf6a4349a9778ebad235c0c, type: 3}
+  - {fileID: 8300000, guid: dcba1be724260d1418652f19a88bf60a, type: 3}
   audioSource: {fileID: 1070306354}
 --- !u!1 &8392657267115099120
 GameObject:

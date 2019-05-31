@@ -16,23 +16,16 @@ public class FootStepSoundController : MonoBehaviour
     [SerializeField] private LayerMask layerMask;
     [SerializeField] private FloatMinMax pitchMinMax;
     [SerializeField] private FloatMinMax volumeOffset;
+    [SerializeField] private AudioClip[] audioClips;
 
     [SerializeField, HideInInspector] private AudioSource audioSource;
 
     private RaycastHit hit;
     private Ray ray;
-    private AudioClip[] audioClips;
-    private FootStepAudioService audioService;
 
     private void OnValidate()
     {
         audioSource = GetComponent<AudioSource>();
-    }
-
-    private void Start()
-    {
-        audioService = ServiceLocatorNamespace.ServiceLocator.Instance.Get<FootStepAudioService>() as FootStepAudioService;
-        audioClips = (foot == Foot.Left) ? audioService.LeftFootAudioClips : audioService.RightFootAudioClips;
     }
 
     public void CheckForFloor(float volume)
