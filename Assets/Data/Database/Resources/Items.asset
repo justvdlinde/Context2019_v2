@@ -16,11 +16,87 @@ MonoBehaviour:
   WorksheetName: Items
   dataArray:
   - id: ID_ITEM_001
-    name: Zwaard
-    description: Dit zwaard werd gebruikt in de jaren 1600
-  - id: ID_ITEM_002
-    name: Pot
-    description: Potten waren gemaakt van klei
-  - id: ID_ITEM_003
     name: Grootboek
-    description: In het grootboek werden de boekhoudingen gedaan zoals het rantsoen
+    description: "In het grootboek werden de boekhoudingen bijgehouden, zoals de ge\xEFnde
+      belanstingen, schulden, de hoeveelheid rantsoen het kasteel heeft en wat voor
+      goederen zijn opgeslagen."
+  - id: ID_ITEM_002
+    name: Kaars
+    description: "De voornaamste lichtbron in het kasteel tijdens de middeleeuwen
+      waren kaarsen. Kaarsenmaker was dan ook een gerespecteerd beroep en in veel
+      grote steden hadden kaarsenmakers grote en machtige gilden. Vanaf de 15de eeuw
+      kwamen er echter mogelijkheden voor mensen om met behulp van eenvoudige werktuigen
+      zelf kaarsen te maken. Dat verspreidde het gebruik nog verder, met name in huishoudens.\n\nMiddeleeuwse
+      kaarsen waren gemaakt uit bijenwas of vet .Waskaarsen brandden vele malen beter
+      dan vetkaarsen, maar waren ook een stuk duurder. Daarom werden waskaarsen vooral
+      gebruikt bij ceremoni\xEBle of religieuze gelegenheden of in zeer rijke huishoudens.\n\nDe
+      katholeiek kerk had voorschriften die stelden dat in kerken en kloosters gebruikte
+      kaarsen een bepaald minimum percentage aan bijenwas moest bezitten. Dat was
+      niet alleen vanwege de kwaliteit en luxe, de bijen die de was produceerden golden
+      als maagdelijke dieren en werden daardoor geassocieerd met de Heilige Maagd
+      Maria."
+  - id: ID_ITEM_003
+    name: Vaas
+    description: "Vazen werden voor veel verschillende doeleinden gebruikt, met name
+      om vloeistof, zoals water, vanuit de waterput naar binnen te nemen. \n\nVazen
+      in de middeleeuwen konden worden gemaakt van veel verschillende grondstoffen
+      zoals klei, glas en keramiek. Aanvankelijk van de welgesteldheid van de eigenaar
+      konden waren deze uitbundig versierd."
+  - id: ID_ITEM_004
+    name: Kandelaar
+    description: "De kandelaar wordt gebruikt om kaarsen in te zetten en het was mee
+      op te vangen. Kandelaren stonden meestal op tafels en veel bezochte ruimtes
+      om deze te belichten. \n\nTijdens de middeleeuwen werden kandelaren gemaakt
+      met hout, koper, metaal of zilver. Des te meer geld de eigenaar had, des te
+      sierlijker waren kandelaren vormgegeven."
+  - id: ID_ITEM_005
+    name: Perkament rol
+    description: "Tijdens de middeleeuwen werd geschreven op perkament. Perkament
+      werd gemaakt van huid van kalveren, koeien, geiten, schapen, konijnen of ezels
+      en was dan ook vrij duur om te produceren. Papyrus (papier) bestond wel maar
+      werdt niet veel gebruikt. Geleerden vonden namelijk dat papier een goedkoop
+      product was, werd snel nat en was niet lang houdbaar. Daarnaast straalde perkament
+      een bepaalde prestige uit. Vanaf de veertiende eeuw werd steeds vaker papier
+      als schrijfmiddel gebruikt.\n\nVia de volgende stappen werdt perkament gemaakt:\n1.
+      \ Een dier werd geslacht en het huid werd eraf gehaald.\n2.  De huid werd langdurig
+      geweekt in stromend water om het zacht en schoon te maken.\n3.  De huid werd
+      in kalkwater gelegd, waardoor de haarwortels en vleesresten los kwamen te zitten.\n4.
+      \ Haarresten en vleesresten werden voorzichtig verwijderd met behulp van een
+      sikkelvormig mes.\n5.  De huid werd opgespannen op een houten raam, waardoor
+      het een glad oppervlak kreeg.\n6.  Nog eenmaal werd het perkament afgeschraapt
+      en ten slotte gepolijst met puimsteen en kalk.\n7.  Het perkament werd op maat
+      gesneden en tot hele lange stroken aan elkaar geplakt en om een stokje gerold
+      tot een boekrol \n\nHet maken van 1 vel duurde ongeveer een maand."
+  - id: ID_ITEM_006
+    name: Inktpot
+    description: Middeleeuwse inkt bestond uit een mengsel van walnoten, roet of ijzersulfaat.
+      Inktpotten waren soms rijkelijk versierd en waren voornamelijk gemaakt uit hout
+      of ijzer.
+  - id: ID_ITEM_007
+    name: Schrijfveer
+    description: 'Ganzenveren werden gebruikt om mee te schrijven. De komst van de
+      ganzenveer, rond het jaar 700, verdrong de bamboe- en rietpen die tot dan gebruikelijk
+      waren. Een ganzenveer kon niet zomaar gebruikt worden, deze moest eerst worden
+      bewerkt door de veer schuin aan te snijden en het merg te verwijderen, waarna
+      de veer gehard werd en in water moest weken.
+
+
+      Men gaf de voorkeur aan de veren van de linkervleugel, omdat deze een buiging
+      hebben die voor rechtshandige schrijvers van de schrijver af gericht is.
+
+
+      Zwanenveren werden ook gebruikt, maar waren door hun schaarste duurder. Voor
+      het trekken van dunne lijnen werden pennen van kraaienveren gebruikt en als
+      tweede keus ook veren van uilen, haviken en zelfs kalkoenen.'
+  - id: ID_ITEM_008
+    name: Hellebaard
+    description: "Een hellebaard iis een wapen dat bestaat uit een lange houten stok
+      met een ijzeren punt, en daaronder, tegenover elkaar geplaatst, een bijl en
+      een haak. Veel middeleeuwse wapens (bijl, zwaard, dolk) reikten niet hoog genoeg
+      om een ernstige bedreiging voor een man te paard te vormen. \n\nAl in de dertiende
+      eeuw worden stokwapens door voetsoldaten gebruikt. Het bekendste stokwapen is
+      de hellebaard. In de dertiende eeuw wordt gestreefd naar een gecombineerd houw-
+      en stootwapen. In de veertiende eeuw wordt een sterke haak aan de rugzijde geplaatst
+      die er onder andere voor dient om ruiters van hun paard te trekken of hun wapenrustingen
+      te doorboren. Hierdoor werden de voetsoldaten tot geduchte, en in vele gevallen,
+      zelfs superieure tegenstanders van de ruiters."
