@@ -139,6 +139,10 @@ MonoBehaviour:
   session: {fileID: 6828979267338176984}
   sessionController: {fileID: 1083836406648120748}
   backgroundRenderer: {fileID: 6830811279106727810}
+  trackableScenes:
+  - {fileID: 848587264}
+  - {fileID: 258485303}
+  - {fileID: 3549852715713008923}
 --- !u!1 &3751409605527627586
 GameObject:
   m_ObjectHideFlags: 0
