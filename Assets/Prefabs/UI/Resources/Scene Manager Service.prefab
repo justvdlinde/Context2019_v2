@@ -432,9 +432,9 @@ MonoBehaviour:
   locationScenePairs:
   - locationID: 0
     scene: Assets/Scenes/Art/GreatHall/GreatHall_V1.unity
-  - locationID: 0
+  - locationID: 1
     scene: Assets/Scenes/Art/TowerScene/TowerScene_V1.unity
-  - locationID: 0
+  - locationID: 2
     scene: Assets/Scenes/Art/CastleGateScene.unity
 --- !u!1 &8671325307293019178
 GameObject:
