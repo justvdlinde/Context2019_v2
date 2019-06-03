@@ -1,8 +1,12 @@
-﻿using UnityEngine;
+﻿using ServiceLocatorNamespace;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class IntroUI : MonoBehaviour
 {
+    [SerializeField, ScenePath] private string mainMenu;
+
+    [Header("Child References")]
     [SerializeField] private Button languageButtonNL;
     [SerializeField] private Button languageButtonEN;
     [SerializeField] private Button continueButton;
@@ -10,8 +14,12 @@ public class IntroUI : MonoBehaviour
     [SerializeField] private GameObject languageRoot;
     [SerializeField] private GameObject introRoot;
 
+    private SceneManagerService sceneManager;
+
     private void Start()
     {
+        sceneManager = ServiceLocator.Instance.Get<SceneManagerService>() as SceneManagerService;
+
         uiRoot.SetActive(true);
         languageRoot.SetActive(true);
         introRoot.SetActive(false);
@@ -21,14 +29,14 @@ public class IntroUI : MonoBehaviour
     {
         languageButtonNL.onClick.AddListener(OnLanguageNLPressed);
         languageButtonEN.onClick.AddListener(OnLanguageENPressed);
-        continueButton.onClick.AddListener(OnContinueButotnClicked);
+        continueButton.onClick.AddListener(OnContinueButtonClicked);
     }
 
     private void OnDisable()
     {
         languageButtonNL.onClick.RemoveListener(OnLanguageNLPressed);
         languageButtonEN.onClick.RemoveListener(OnLanguageENPressed);
-        continueButton.onClick.RemoveListener(OnContinueButotnClicked);
+        continueButton.onClick.RemoveListener(OnContinueButtonClicked);
     }
 
     private void OnLanguageNLPressed()
@@ -47,8 +55,8 @@ public class IntroUI : MonoBehaviour
         introRoot.SetActive(true);
     }
 
-    private void OnContinueButotnClicked()
+    private void OnContinueButtonClicked()
     {
-        Destroy(gameObject);
+        sceneManager.LoadScene(mainMenu);
     }
 }
