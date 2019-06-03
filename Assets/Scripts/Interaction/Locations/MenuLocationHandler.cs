@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 
 public class MenuLocationHandler : MonoBehaviour
 {
-    [SerializeField] private LocationInfoUI locationUI;
+    [SerializeField] private MenuLocationInfoUI locationUI;
     [SerializeField] private new Camera camera;
 
     private LocationDatabaseService locationsService;

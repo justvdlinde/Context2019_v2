@@ -120,7 +120,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 810
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
     spaceCount: 123
     wordCount: 124
     linkCount: 0
-    lineCount: 7
+    lineCount: 28
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -176,6 +176,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1955768846161907507}
+  - component: {fileID: 4643951345943335991}
   - component: {fileID: 9107603675152502288}
   m_Layer: 5
   m_Name: Toggle
@@ -204,6 +205,14 @@ RectTransform:
   m_AnchoredPosition: {x: 27.100098, y: -0.000048637}
   m_SizeDelta: {x: 54.2, y: 49}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4643951345943335991
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127144403424664382}
+  m_CullTransparentMesh: 0
 --- !u!114 &9107603675152502288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,7 +279,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3343548703511652097
 RectTransform:
   m_ObjectHideFlags: 0
@@ -437,7 +446,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 0
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -537,6 +546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b70b1d2c308a6948bcb3e08bb277727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  searchLocationDataSelf: 0
   markerImage: {fileID: 8379055769841835561}
   title: {fileID: 2674551519855567639}
   information: {fileID: 2977420722589066663}

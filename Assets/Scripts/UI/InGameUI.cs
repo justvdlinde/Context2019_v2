@@ -24,6 +24,7 @@ public class InGameUI : MonoBehaviour
 
     private PopupService popupService;
     private SceneManagerService sceneManager;
+    private LocationDatabaseService locationService;
 
     private void OnValidate()
     {
@@ -34,6 +35,7 @@ public class InGameUI : MonoBehaviour
     {
         popupService = ServiceLocator.Instance.Get<PopupService>() as PopupService;
         sceneManager = ServiceLocator.Instance.Get<SceneManagerService>() as SceneManagerService;
+        locationService = ServiceLocator.Instance.Get<LocationDatabaseService>() as LocationDatabaseService;
 
         SetupIntroUI();
     }
@@ -60,7 +62,12 @@ public class InGameUI : MonoBehaviour
 
     private void SetupIntroUI()
     {
-        // TODO: location + date a.d.h.v current location
+        int locationID = sceneManager.CurrentLocationID;
+        if (locationID != SceneManagerService.MENU_ID)
+        {
+            LocationsData locationData = locationService.GetLocationData(locationID);
+            location.text = locationData.Name;
+        }
 
         fadeAnimation.Play();
     }
@@ -69,8 +76,6 @@ public class InGameUI : MonoBehaviour
     {
         sidebar.Close();
         sceneManager.LoadScene(menuScene);
-
-        // TODO: return to main scene
     }
 
     private void OnPauseTogglePressed(bool toggle)

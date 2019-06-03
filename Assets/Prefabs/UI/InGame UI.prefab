@@ -1223,6 +1223,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Location Info Panel
       objectReference: {fileID: 0}
+    - target: {fileID: 2233235725408955402, guid: 27290e8ea40f46f4a99cf93af5da3a11,
+        type: 3}
+      propertyPath: searchLocationDataSelf
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2977420722589066663, guid: 27290e8ea40f46f4a99cf93af5da3a11,
         type: 3}
       propertyPath: m_textInfo.lineCount

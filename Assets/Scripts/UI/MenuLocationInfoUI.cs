@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class LocationInfoUI : MonoBehaviour
+public class MenuLocationInfoUI : MonoBehaviour
 {
     [SerializeField] private LocationInformationPanel infoPanel;
 
