@@ -100,3 +100,13 @@ MonoBehaviour:
       die er onder andere voor dient om ruiters van hun paard te trekken of hun wapenrustingen
       te doorboren. Hierdoor werden de voetsoldaten tot geduchte, en in vele gevallen,
       zelfs superieure tegenstanders van de ruiters."
+  - id: ID_ITEM_009
+    name: Troon
+    description: Zaten alleen belangrijke mensen, zitvlak kon omhoog om speciale voorwerpen
+      in de stoel te bewaren
+  - id: ID_ITEM_010
+    name: Johan
+    description: 
+  - id: ID_ITEM_011
+    name: Zweder
+    description: 

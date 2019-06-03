@@ -72,8 +72,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89c8548597304994ea895aa4fd43f726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 8
   hideAtStart: 0
+  isViewable: 0
   destroyAfterInteraction: 0
   gObject: {fileID: 38059123250381031}
   collider: {fileID: 2304089571943222069}
