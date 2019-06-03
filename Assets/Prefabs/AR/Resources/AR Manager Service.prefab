@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 3695590231710937186}
   - component: {fileID: 2830719249309824906}
   m_Layer: 0
-  m_Name: AR Manager
+  m_Name: AR Manager Service
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,6 +119,7 @@ Transform:
   - {fileID: 4774571036383852173}
   - {fileID: 848587263}
   - {fileID: 258485302}
+  - {fileID: 6873292722342593507}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -185,6 +186,50 @@ MonoBehaviour:
   trackableObjects:
   - {fileID: 848587264}
   - {fileID: 258485303}
+--- !u!1 &5336059268449830728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6873292722342593507}
+  - component: {fileID: 3549852715713008923}
+  m_Layer: 0
+  m_Name: TrackedSceneObject 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &6873292722342593507
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5336059268449830728}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.296166, y: 4.1821017, z: 0.5729914}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3695590231710937186}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3549852715713008923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5336059268449830728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57eabe987586b5041b452f49b2992496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: Assets/Scenes/Art/CastleGateScene.unity
 --- !u!1 &6597091760202793885
 GameObject:
   m_ObjectHideFlags: 0
