@@ -14,6 +14,8 @@ public class Location : MonoBehaviour, IInteractable
     public Action InteractionStartEvent { get; set; }
     public Action InteractionStopEvent { get; set; }
 
+    public bool IsViewable => false;
+
     public void OnInteractionStart()
     {
         OnSelectChange(true);

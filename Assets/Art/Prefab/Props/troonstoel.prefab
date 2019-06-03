@@ -9,12 +9,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5354782183537115102}
+  - component: {fileID: 2304089571943222069}
+  - component: {fileID: 7016206822951085988}
+  - component: {fileID: 1730038475833900330}
   m_Layer: 0
   m_Name: troonstoel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5354782183537115102
 Transform:
@@ -25,13 +28,56 @@ Transform:
   m_GameObject: {fileID: 38059123250381031}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 8.949, y: 0.5, z: 0.115}
-  m_LocalScale: {x: 0.011437253, y: 0.011437253, z: 0.011437253}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6618232456716944624}
+  - {fileID: 5383543832466242502}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!1 &5970479532901322564
+--- !u!65 &2304089571943222069
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38059123250381031}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.69, y: 1, z: 0.6}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &7016206822951085988
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38059123250381031}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.81, y: 1, z: 0.2}
+  m_Center: {x: 0, y: 0.66, z: -0.17}
+--- !u!114 &1730038475833900330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38059123250381031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89c8548597304994ea895aa4fd43f726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  hideAtStart: 0
+  destroyAfterInteraction: 0
+  gObject: {fileID: 38059123250381031}
+  collider: {fileID: 2304089571943222069}
+--- !u!1 &1032556073717354651
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -39,45 +85,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6618232456716944624}
-  - component: {fileID: 3926457064868692609}
-  - component: {fileID: 3417820410349992983}
+  - component: {fileID: 5383543832466242502}
+  - component: {fileID: 837142886247081061}
+  - component: {fileID: 8235147869292405214}
   m_Layer: 0
-  m_Name: polySurface2_pCube47
+  m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!4 &6618232456716944624
+--- !u!4 &5383543832466242502
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5970479532901322564}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 1032556073717354651}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.011440012, y: 0.00814, z: 0.011440012}
   m_Children: []
   m_Father: {fileID: 5354782183537115102}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3926457064868692609
+--- !u!33 &837142886247081061
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5970479532901322564}
+  m_GameObject: {fileID: 1032556073717354651}
   m_Mesh: {fileID: 4300000, guid: ec09bcc3e83dcc74399060dcb414a96c, type: 3}
---- !u!23 &3417820410349992983
+--- !u!23 &8235147869292405214
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5970479532901322564}
+  m_GameObject: {fileID: 1032556073717354651}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1

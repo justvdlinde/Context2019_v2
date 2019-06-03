@@ -15,6 +15,8 @@ public class InteractableTrigger : MonoBehaviour, IInteractable
     public Action InteractionStartEvent { get; set; }
     public Action InteractionStopEvent { get; set; }
 
+    public bool IsViewable => false;
+
     [SerializeField] private UnityEvent interactionStartEvent;
     [SerializeField] private UnityEvent interactionStopUnityEvent;
 

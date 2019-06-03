@@ -89,19 +89,18 @@ public class InteractableItemViewer : MonoBehaviour
 
         isViewing = true;
         interactableItem = item;
-
-        StartCoroutine(LerpItemIntoView(item));
-
-        camera.enabled = true;
-
-        SetUI(itemDatabase.GetItemData(item.ID));
-
+        SetUI(itemDatabase.GetItemData(item.ID), item);
         itemUI.StopViewingItemButtonPressedEvent += OnCloseButtonPressed;
+
+        if (item.IsViewable)
+        {
+            StartCoroutine(LerpItemIntoView(item));
+        }
     }
 
-    private void SetUI(ItemsData data)
+    private void SetUI(ItemsData data, IInteractable interactable)
     {
-        itemUI.ShowItemInfoUI(data);
+        itemUI.ShowItemInfoUI(data, interactable);
     }
 
     private void View()
@@ -125,17 +124,17 @@ public class InteractableItemViewer : MonoBehaviour
     {
         interactableItem.OnInteractionStop();
 
-        if(!interactableItem.DestroyAfterInteraction)
-        { 
-            StartCoroutine(LerpItemBackToOrigin(interactableItem));
-        }
-        else
+        if (interactableItem.IsViewable)
         {
-            camera.enabled = false;
-            interactionHandler.SetActive(true);
+            if (!interactableItem.DestroyAfterInteraction)
+            {
+                StartCoroutine(LerpItemBackToOrigin(interactableItem));
+            }
+            
+            itemContainer.rotation = Quaternion.identity;
         }
 
-        itemContainer.rotation = Quaternion.identity;
+        interactionHandler.SetActive(true);
         interactableItem = null;
         isViewing = false;
         itemUI.StopViewingItemButtonPressedEvent -= OnCloseButtonPressed;
@@ -143,6 +142,7 @@ public class InteractableItemViewer : MonoBehaviour
 
     private IEnumerator LerpItemIntoView(IInteractable item)
     {
+        camera.enabled = true;
         itemOriginalLayer = item.GameObject.layer;
         item.GameObject.layer = viewedItemLayer.LayerIndex;
 
@@ -155,7 +155,6 @@ public class InteractableItemViewer : MonoBehaviour
             float lerp = (lerpTime - timeRemaining) / lerpTime;
             itemTransform.rotation = Quaternion.Lerp(itemOriginalTransformData.rotation, itemContainer.rotation, lerp);
             itemTransform.position = Vector3.Lerp(itemOriginalTransformData.position, itemContainer.position, lerp);
-
             timeRemaining -= Time.deltaTime;
             yield return null;
         }
