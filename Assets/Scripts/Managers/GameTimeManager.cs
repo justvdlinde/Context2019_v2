@@ -11,6 +11,7 @@ public static class GameTimeManager
 
     public static Action<TimeState> GameTimeStateChanged;
     public static TimeState CurrentTimeState = TimeState.Normal;
+    public static int GetCurrentTimeScale { get { return (int)CurrentTimeState; } }
 
     public static void PauseGame()
     {

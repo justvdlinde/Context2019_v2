@@ -27,8 +27,9 @@ public class SceneManagerService : MonoBehaviour, IService
     {
         ShowLoadingbar(true);
         onDone += () => ShowLoadingbar(false);
-        StartCoroutine(SceneManagerUtility.LoadScene(scene, onDone));
 
+        GameTimeManager.ResumeGame();
+        StartCoroutine(SceneManagerUtility.LoadScene(scene, onDone));
         CurrentLocationID = GetNewLocation(scene);
     }
 
