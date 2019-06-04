@@ -1147,12 +1147,12 @@ GameObject:
   - component: {fileID: 46158660}
   - component: {fileID: 46158663}
   - component: {fileID: 46158662}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Quad (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &46158660
 Transform:
@@ -20946,7 +20946,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 101
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &807706108
 Transform:
@@ -21018,12 +21018,12 @@ GameObject:
   - component: {fileID: 809765094}
   - component: {fileID: 809765097}
   - component: {fileID: 809765096}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Quad (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &809765094
 Transform:
@@ -24422,7 +24422,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 100
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1119673891
 Transform:
@@ -25065,12 +25065,12 @@ GameObject:
   - component: {fileID: 1145718378}
   - component: {fileID: 1145718381}
   - component: {fileID: 1145718380}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Quad (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1145718378
 Transform:
@@ -27999,7 +27999,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 101
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1404859624
 Transform:
@@ -28976,7 +28976,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 101
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1501877249
 Transform:
@@ -32104,7 +32104,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 101
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1781304810
 Transform:
@@ -34224,12 +34224,12 @@ GameObject:
   - component: {fileID: 1868630201}
   - component: {fileID: 1868630204}
   - component: {fileID: 1868630203}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Quad (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1868630201
 Transform:
@@ -35284,6 +35284,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Editor Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 4299423863396244838, guid: d68762a84531c6f44837f0f1cae1c5f6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4299423863396244839, guid: d68762a84531c6f44837f0f1cae1c5f6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -35337,6 +35342,11 @@ PrefabInstance:
     - target: {fileID: 4299423863396244839, guid: d68762a84531c6f44837f0f1cae1c5f6,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299423861911024513, guid: d68762a84531c6f44837f0f1cae1c5f6,
+        type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -36770,12 +36780,12 @@ GameObject:
   - component: {fileID: 2043644319}
   - component: {fileID: 2043644322}
   - component: {fileID: 2043644321}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Quad (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2043644319
 Transform:
@@ -37856,12 +37866,12 @@ GameObject:
   - component: {fileID: 2137689534}
   - component: {fileID: 2137689537}
   - component: {fileID: 2137689536}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Quad (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2137689534
 Transform:
