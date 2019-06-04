@@ -15,11 +15,6 @@ public class ImageTrackingController : MonoBehaviour
     private Dictionary<int, TrackedImageObject> trackedObjects = new Dictionary<int, TrackedImageObject>();
     private List<AugmentedImage> scannableImages = new List<AugmentedImage>();
 
-    private void OnValidate()
-    {
-        arBackgroundHandler = FindObjectOfType<ARCoreBackgroundHandler>();
-    }
-
     private void Start()
     {
         arManager = ServiceLocatorNamespace.ServiceLocator.Instance.Get<ARManagerService>() as ARManagerService;
