@@ -1,24 +1,25 @@
 ﻿#if UNITY_EDITOR
 using UnityEngine;
+using ServiceLocatorNamespace;
 
 public class NonARLocationManager : MonoBehaviour
 {
-    [SerializeField] private TrackedImageScene[] trackableScenes;
-
     private SceneManagerService sceneManager;
+    private ARManagerService arManager;
 
     private void Start()
     {
-        sceneManager = ServiceLocatorNamespace.ServiceLocator.Instance.Get<SceneManagerService>() as SceneManagerService;
+        sceneManager = ServiceLocator.Instance.Get<SceneManagerService>() as SceneManagerService;
+        arManager = ServiceLocator.Instance.Get<ARManagerService>() as ARManagerService;
     }
 
     private void OnGUI()
     {
-        for (int i = 0; i < trackableScenes.Length; i++)
+        for (int i = 0; i < arManager.TrackableScenes.Length; i++)
         {
-            if (GUI.Button(new Rect(i * 150, 10, 150, 50), trackableScenes[i].name))
+            if (GUI.Button(new Rect(i * 150, 10, 150, 50), arManager.TrackableScenes[i].name))
             {
-                sceneManager.LoadScene(trackableScenes[i].Scene);
+                sceneManager.LoadScene(arManager.TrackableScenes[i].Scene);
             }
         }
     }

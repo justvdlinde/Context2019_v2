@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 460100}
   - component: {fileID: 3343470}
   - component: {fileID: 2305984}
+  - component: {fileID: 4902407378763076260}
+  - component: {fileID: 3121969636667676652}
   m_Layer: 0
   m_Name: scrolls
   m_TagString: Untagged
@@ -78,3 +80,34 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &4902407378763076260
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157598}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.24699141, y: 0.20976484, z: 0.80226296}
+  m_Center: {x: -0.08641832, y: 0.11098704, z: -0.0011177063}
+--- !u!114 &3121969636667676652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89c8548597304994ea895aa4fd43f726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 4
+  hideAtStart: 0
+  isViewable: 1
+  destroyAfterInteraction: 0
+  gObject: {fileID: 157598}
+  collider: {fileID: 4902407378763076260}
