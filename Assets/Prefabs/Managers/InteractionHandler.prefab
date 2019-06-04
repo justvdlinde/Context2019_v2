@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 760876543796065019}
   - component: {fileID: 760876543796065018}
   m_Layer: 0
-  m_Name: Screen Input
+  m_Name: InteractionHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,4 +43,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f0e9e2cebde8d44ba46c97480d9037, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayDistance: 8
+  rayDistance: 4

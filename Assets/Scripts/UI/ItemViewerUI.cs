@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -35,8 +33,10 @@ public class ItemViewerUI : MonoBehaviour
         zoomButton.onClick.RemoveListener(OnItemZoomButtonPressedEvent);
     }
 
-    public void ShowItemInfoUI(ItemsData data)
+    public void ShowItemInfoUI(ItemsData data, IInteractable interactable)
     {
+        zoomButton.gameObject.SetActive(interactable.IsViewable);
+
         itemUI.Setup(data);
         root.SetActive(true);
         sidebar.Open();

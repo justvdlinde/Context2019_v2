@@ -12,6 +12,9 @@ public class ARManagerService : MonoBehaviour, IService
     [SerializeField] private ImageTrackingController sessionController;
     [SerializeField] private ARCoreBackgroundRenderer backgroundRenderer;
 
+    [SerializeField] private TrackedImageScene[] trackableScenes;
+    public TrackedImageScene[] TrackableScenes => trackableScenes;
+
     private void Awake()
     {
         if(ServiceLocator.Instance.ContainsService<ARManagerService>())

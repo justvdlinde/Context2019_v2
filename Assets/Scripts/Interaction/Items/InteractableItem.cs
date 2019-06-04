@@ -19,6 +19,9 @@ public class InteractableItem : MonoBehaviour, IInteractable
     public bool HideAtStart => hideAtStart;
     [SerializeField] private bool hideAtStart;
 
+    [SerializeField] private bool isViewable;
+    public bool IsViewable => isViewable;
+
     bool IInteractable.DestroyAfterInteraction => destroyAfterInteraction;
     [SerializeField] private bool destroyAfterInteraction;
 

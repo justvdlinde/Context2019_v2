@@ -10,6 +10,7 @@ public interface IInteractable
     Collider Collider { get; }
     bool HideAtStart { get; }
     bool DestroyAfterInteraction { get; }
+    bool IsViewable { get; }
 
     void OnInteractionStart();
     void OnInteractionStop();

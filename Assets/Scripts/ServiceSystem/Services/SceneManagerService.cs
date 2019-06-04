@@ -5,6 +5,10 @@ using UnityEngine;
 public class SceneManagerService : MonoBehaviour, IService
 {
     [SerializeField] private GameObject root;
+    [SerializeField] private LocationScenePair[] locationScenePairs;
+
+    public const int MENU_ID = -1;
+    public int CurrentLocationID { get; private set; } = MENU_ID;
 
     private void Awake()
     {
@@ -24,6 +28,21 @@ public class SceneManagerService : MonoBehaviour, IService
         ShowLoadingbar(true);
         onDone += () => ShowLoadingbar(false);
         StartCoroutine(SceneManagerUtility.LoadScene(scene, onDone));
+
+        CurrentLocationID = GetNewLocation(scene);
+    }
+
+    private int GetNewLocation(string newScene)
+    {
+        foreach(LocationScenePair pair in locationScenePairs)
+        {
+            if(pair.scene == newScene)
+            {
+                return pair.locationID;
+            }
+        }
+
+        return MENU_ID;
     }
 
     public void ShowLoadingbar(bool show)
@@ -31,4 +50,11 @@ public class SceneManagerService : MonoBehaviour, IService
         enabled = show;
         root.SetActive(show);
     }
+}
+
+[Serializable]
+public class LocationScenePair
+{
+    [LocationID] public int locationID;
+    [ScenePath] public string scene;
 }
