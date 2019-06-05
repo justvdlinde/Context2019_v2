@@ -3,12 +3,12 @@ using ServiceLocatorNamespace;
 
 public class RoomExitTrigger : MonoBehaviour
 {
-    [Header("Dependencies")]
-    [SerializeField] private MenuScreen menuScreen;
+    //[Header("Dependencies")]
+    //[SerializeField] private MenuScreen menuScreen;
 
-    public void OnTriggerEnter(Collider other)
-    {
-        menuScreen.ShowMenu(true);
-        (ServiceLocator.Instance.Get<ARManagerService>() as ARManagerService).EnableAR(false);
-    }
+    //public void OnTriggerEnter(Collider other)
+    //{
+    //    menuScreen.ShowMenu(true);
+    //    (ServiceLocator.Instance.Get<ARManagerService>() as ARManagerService).EnableAR(false);
+    //}
 }
