@@ -112,6 +112,8 @@ MonoBehaviour:
   destroyAfterInteraction: 0
   gObject: {fileID: 7074602611743770231}
   collider: {fileID: 7436080298342024379}
+  mRendererChild: {fileID: 8297393296032306266}
+  mRenderer: {fileID: 8297393296032306266}
 --- !u!1 &8683014585433074512
 GameObject:
   m_ObjectHideFlags: 0
