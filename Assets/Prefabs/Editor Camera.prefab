@@ -146,7 +146,9 @@ MonoBehaviour:
   breakBeforeColorGrading: 0
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
-  m_AfterStackBundles: []
+  m_AfterStackBundles:
+  - assemblyQualifiedName: TFHCPostProcessPainterlyEffectPPSSettings, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!54 &4299423861911024518
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -208,7 +210,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4299423863396244839}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Editor Camera
   m_TagString: EditorOnly
   m_Icon: {fileID: 0}
