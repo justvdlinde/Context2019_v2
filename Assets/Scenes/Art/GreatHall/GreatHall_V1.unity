@@ -24829,9 +24829,9 @@ Transform:
   - {fileID: 93714398}
   - {fileID: 1581711751}
   - {fileID: 1361333713}
+  - {fileID: 1212150781}
   - {fileID: 1539628848}
   - {fileID: 110433372}
-  - {fileID: 1212150781}
   - {fileID: 129270583}
   - {fileID: 837556613}
   - {fileID: 587473338}
@@ -25759,7 +25759,7 @@ Transform:
   - {fileID: 778565684}
   - {fileID: 146549060}
   m_Father: {fileID: 1137838541}
-  m_RootOrder: 36
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1219239686
 GameObject:
@@ -35583,6 +35583,42 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299423861911024515, guid: d68762a84531c6f44837f0f1cae1c5f6,
+        type: 3}
+      propertyPath: m_projectionMatrixMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299423861911024515, guid: d68762a84531c6f44837f0f1cae1c5f6,
+        type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299423861911024515, guid: d68762a84531c6f44837f0f1cae1c5f6,
+        type: 3}
+      propertyPath: m_FocalLength
+      value: 23.051785
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299423861911024515, guid: d68762a84531c6f44837f0f1cae1c5f6,
+        type: 3}
+      propertyPath: m_SensorSize.x
+      value: 29.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299423861911024515, guid: d68762a84531c6f44837f0f1cae1c5f6,
+        type: 3}
+      propertyPath: m_FOVAxisMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299423861911024517, guid: d68762a84531c6f44837f0f1cae1c5f6,
+        type: 3}
+      propertyPath: m_AfterStackBundles.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299423861911024517, guid: d68762a84531c6f44837f0f1cae1c5f6,
+        type: 3}
+      propertyPath: m_AfterStackBundles.Array.data[0].assemblyQualifiedName
+      value: TFHCPostProcessPainterlyEffectPPSSettings, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d68762a84531c6f44837f0f1cae1c5f6, type: 3}
