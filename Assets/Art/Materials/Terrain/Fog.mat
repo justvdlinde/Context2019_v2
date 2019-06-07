@@ -9,8 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Fog
   m_Shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: EFFECT_BUMP _ALPHABLEND_ON _BLENDMODE_ALPHA _EMISSION _FADING_ON
-    _SURFACE_TYPE_TRANSPARENT
+  m_ShaderKeywords: EFFECT_BUMP _ALPHAMODULATE_ON _BLENDMODE_ALPHA _COLORADDSUBDIFF_ON
+    _EMISSION _FADING_ON _SURFACE_TYPE_TRANSPARENT
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -85,7 +85,7 @@ Material:
     - _CameraFadingEnabled: 1
     - _CameraFarFadeDistance: 1355.52
     - _CameraNearFadeDistance: 81
-    - _ColorMode: 0
+    - _ColorMode: 1
     - _Cull: 2
     - _CullMode: 2
     - _Cutoff: 0.5
@@ -110,7 +110,7 @@ Material:
     - _DistortionVectorBias: -1
     - _DistortionVectorScale: 2
     - _DoubleSidedEnable: 0
-    - _DstBlend: 1
+    - _DstBlend: 10
     - _EmissionEnabled: 1
     - _EmissiveExposureWeight: 1
     - _EmissiveIntensity: 1
@@ -124,7 +124,7 @@ Material:
     - _IncludeIndirectLighting: 1
     - _LightingEnabled: 0
     - _Metallic: 0
-    - _Mode: 4
+    - _Mode: 6
     - _Occlusion: 7.5
     - _OcclusionStrength: 1
     - _Parallax: 0.02
@@ -134,7 +134,7 @@ Material:
     - _SoftParticlesNearFadeDistance: 0.4
     - _SpecularHighlights: 1
     - _SquashAmount: 1
-    - _SrcBlend: 5
+    - _SrcBlend: 2
     - _StencilRef: 0
     - _StencilRefDepth: 32
     - _StencilRefDistortionVec: 64
@@ -152,7 +152,7 @@ Material:
     m_Colors:
     - _CameraFadeParams: {r: 81, g: 0.0007846091, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorAddSubDiff: {r: -1, g: 1, b: 0, a: 0}
+    - _ColorAddSubDiff: {r: 1, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
