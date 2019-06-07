@@ -27,7 +27,7 @@ public class InteractableItem : MonoBehaviour, IInteractable
 
     [SerializeField, HideInInspector] private GameObject gObject;
     [SerializeField, HideInInspector] private new Collider collider;
-    [SerializeField, HideInInspector] private MeshRenderer mRendererChild;
+    [SerializeField, HideInInspector] private MeshRenderer mRendererParent;
     [SerializeField, HideInInspector] private MeshRenderer mRenderer;
 
     private new Rigidbody rigidbody;
@@ -40,20 +40,21 @@ public class InteractableItem : MonoBehaviour, IInteractable
         collider = GetComponent<Collider>();
         rigidbody = GetComponent<Rigidbody>();
         mRenderer = GetComponent<MeshRenderer>();
-        mRendererChild = GetComponentInParent<MeshRenderer>();
+        mRendererParent = GetComponentInParent<MeshRenderer>();
     }
 
     private void Start()
     {
         Show(!hideAtStart);
+
     }
 
     public void OnInteractionStart()
     {
         colliderWasEnabledBeforeInteraction = collider.enabled;
         collider.enabled = false;
-        mRenderer.enabled = false;
-        mRendererChild.enabled = true;
+        mRendererParent.enabled = false;
+        mRenderer.enabled = true;
 
         if(rigidbody != null)
         {
@@ -67,8 +68,8 @@ public class InteractableItem : MonoBehaviour, IInteractable
     public void OnInteractionStop()
     {
         InteractionStopEvent?.Invoke();
-        mRenderer.enabled = true;
-        mRendererChild.enabled = false;
+        mRenderer.enabled = false;
+        mRendererParent.enabled = true;
 
         if (destroyAfterInteraction)
         {
