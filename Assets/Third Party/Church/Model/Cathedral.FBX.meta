@@ -147,7 +147,27 @@ ModelImporter:
   - first:
       95: 9500000
     second: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cathedral
+    second: {fileID: 2100000, guid: 859dad42d830a574e8a2f4efd72200fe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ivy1
+    second: {fileID: 2100000, guid: 802d2ccd47591f04e9e95a098ba61179, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ivy2
+    second: {fileID: 2100000, guid: 08f8a2648ba247b41b0024c4bc5c90d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MrsLovettsBuilding
+    second: {fileID: 2100000, guid: d60790de1bc197d45a203df8bcfc1fcd, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -187,7 +207,7 @@ ModelImporter:
     importCameras: 0
     importLights: 0
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
