@@ -17,15 +17,20 @@ MonoBehaviour:
   dataArray:
   - id: ID_LOCATION_001
     name: De Grote Zaal
-    description: De grote zaal is waar belangrijke gesprekken werden gehouden
-    story: Dit is het verhaal wat is afgespeeld in de voortuin
+    description: De grote zaal is waar de Heer of Vrouw van het kasteel zat en belangrijke
+      gasten ontmoette en sprak. Ook werd de kamer door de adel gebruikt als eetkamer.
+    story: "In de Grote Zaal wordt hof gehouden. De Heer van het kasteel, Johan III,
+      en zijn broeder Zweder staan te discussi\xEBren over de oorlog met Utrecht."
   - id: ID_LOCATION_002
     name: De Witte Toren
-    description: De witte toren werd gebouwd in 1300. De witte bakstenen maken het
-      uniek voor de rest van het kasteel
-    story: Dit is het verhaal wat is afgespeeld in de achtertuin
+    description: De Witte toren was een donjon, een verdedigingstoren, ontworpen om
+      het Opperhof en Nederhof te verdedigen. De toren werd voltooid in 1371 en had
+      muren van 4,40 meter dik. De stenen waren wit gekleurd, wat zorgde voor een
+      indrukwekkend uitzicht.
+    story: Boven op de Witte Toren staan Johan III en Zweder om het gevecht te observeren,
+      zullen ze terug vechten of vluchten?
   - id: ID_LOCATION_003
     name: De Grote Poort
-    description: De grote poort diende als voordeur van het kasteel. Hier kwamen de
-      meeste gasten, handelaren binnen
-    story: Dit is het verhaal wat is afgespeeld op het middenhof
+    description: De grote poort was 1 van de 2 poorten van het kasteel die naar buiten
+      leidde. De poort lag aan de Opperhof, het woongedeelte van de grafelijke familie.
+    story: Er wordt op de poort gebonkt, wie kan het zijn?
