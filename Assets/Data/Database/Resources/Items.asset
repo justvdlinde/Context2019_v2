@@ -102,11 +102,35 @@ MonoBehaviour:
       zelfs superieure tegenstanders van de ruiters."
   - id: ID_ITEM_009
     name: Troon
-    description: Zaten alleen belangrijke mensen, zitvlak kon omhoog om speciale voorwerpen
-      in de stoel te bewaren
+    description: "Op de troon zat de Heer of Vrouwe om gasten te ontmoeten en te spreken.
+      Het was verboden voor andere mensen om hier te zitten. \n\nHet zitvlak kon omhoog
+      om belangrijke voorwerpen in de stoel te bewaren"
   - id: ID_ITEM_010
-    name: Johan
-    description: 
+    name: Johan III van Culemborg
+    description: 'Heer van kasteel Culeborg. Johan was geboren in 1374 en overleden
+      op 1 April 1452, op 78 jarige leeftijd overleden. '
   - id: ID_ITEM_011
     name: Zweder
-    description: 
+    description: "Zweder van Culemborg (gestorven in Bazel, 21 september 1433) was
+      bisschop van Utrecht tijdens het Utrechts schisma, een crisis waarin grote verdeeldheid
+      heerste over wie de rechtmatige bisschop van Utrecht was. \n\nNa de dood van
+      bisschop Frederik van Blankenheim in 1423 was een opvolgingsstrijd ontstaan
+      tussen twee kandidaten voor de bisschoppelijke titel, Zweder van Culemborg en
+      Rudolf van Diepholt. Om de strijd te beslechten benoemde paus Martinus V op
+      7 juni 1424 zijn eigen gunsteling, Rhabanus van Helmstatt, tot bisschop van
+      Utrecht. Deze trok zich terug, waarna de paus op 6 februari 1425 Zweder aanstelde.
+      Rudolf week niet, zodat Zweder zich met geweld van het gezag meester moest maken.
+      Hij werd in 1426 echter de stad uitgejaagd door zijn tegenstanders.Rudolf werd
+      daarop door de paus in de ban gedaan, maar hij wist zich te handhaven, al kon
+      Zweder aanvankelijk rekenen op de steun van hertog Filips de Goede, die tevens
+      graaf van Holland was, en van de hertog van Gelre. Rudolf wist echter een akkoord
+      te sluiten met beide naburige vorsten, waarop paus Eugenius IV (de opvolger
+      van Martinus V) Zweder op 10 december 1432 tot titulair bisschop van Caesarea
+      benoemde en Rudolf op de zetel van Utrecht erkende. Zweder beklaagde zich hierover
+      bij het Concilie van Bazel, dat hem in het gelijk stelde, maar hij overleed
+      niet veel later."
+  - id: ID_ITEM_012
+    name: Everzwijn hoofd
+    description: Het hoofd van een everzwijn. Dieren hoofden werden vaak opgehangen
+      in kastelen. Deze waren meestal gevangen door de Heer van het kasteel of een
+      lid van zijn familie en werden als pronkstukken opgehangen.
