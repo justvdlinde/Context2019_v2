@@ -5,11 +5,14 @@ using UnityEngine;
 public class ScenarioItemInteractionTrigger : MonoBehaviour
 {
     [SerializeField, ScenarioFlag] private int interactionStartFlag;
+    [SerializeField, ScenarioHint] private int interactionStartHint;
     [SerializeField, ScenarioFlag] private int interactionStopFlag;
+    [SerializeField, ScenarioHint] private int interactionStopHint;
 
     [SerializeField, HideInInspector] private IInteractable interactableObject;
 
-    private ScenarioFlagsService service;
+    private ScenarioFlagsService flagService;
+    private ScenarioHintService hintService;
 
     private void OnValidate()
     {
@@ -18,7 +21,8 @@ public class ScenarioItemInteractionTrigger : MonoBehaviour
 
     private void OnEnable()
     {
-        service = ServiceLocator.Instance.Get<ScenarioFlagsService>() as ScenarioFlagsService;
+        flagService = ServiceLocator.Instance.Get<ScenarioFlagsService>() as ScenarioFlagsService;
+        hintService = ServiceLocator.Instance.Get<ScenarioHintService>() as ScenarioHintService;
 
         interactableObject.InteractionStartEvent += TriggerInteractionStartEvent;
         interactableObject.InteractionStopEvent += TriggerInteractionStopEvent;
@@ -34,7 +38,12 @@ public class ScenarioItemInteractionTrigger : MonoBehaviour
     {
         if (interactionStartFlag != ScenarioFlag.None)
         {
-            service.AddFlag(interactionStartFlag);
+            flagService.AddFlag(interactionStartFlag);
+        }
+
+        if(interactionStartHint != ScenarioHint.None)
+        {
+            hintService.SetCurrentHint(interactionStartHint);
         }
     }
 
@@ -42,7 +51,12 @@ public class ScenarioItemInteractionTrigger : MonoBehaviour
     {
         if (interactionStopFlag != ScenarioFlag.None)
         {
-            service.AddFlag(interactionStopFlag);
+            flagService.AddFlag(interactionStopFlag);
+        }
+
+        if (interactionStopHint != ScenarioHint.None)
+        {
+            hintService.SetCurrentHint(interactionStopHint);
         }
     }
 }

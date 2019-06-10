@@ -112,6 +112,8 @@ MonoBehaviour:
   destroyAfterInteraction: 0
   gObject: {fileID: 794434477651588080}
   collider: {fileID: 2097315778331718325}
+  mRendererParent: {fileID: 0}
+  mRenderer: {fileID: 794434477649325360}
 --- !u!114 &7360205853653042673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,4 +167,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionStartFlag: 18078
+  interactionStartHint: -67668
   interactionStopFlag: 0
+  interactionStopHint: 0

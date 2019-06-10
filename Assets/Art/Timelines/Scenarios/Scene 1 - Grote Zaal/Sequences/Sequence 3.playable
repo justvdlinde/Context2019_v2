@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8512490073894973115
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82b58daec416ecb4ba5dc818c86a517c, type: 3}
+  m_Name: Timeline Hint Marker
+  m_EditorClassIdentifier: 
+  m_Time: 0.16666666666666666
+  hint: 0
 --- !u!114 &-8506400236294425525
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -456,6 +470,20 @@ MonoBehaviour:
   m_OpenClipOffsetRotation: {x: 0, y: 0, z: 0, w: 1}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_ApplyOffsets: 0
+--- !u!114 &-4968501749951335184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82b58daec416ecb4ba5dc818c86a517c, type: 3}
+  m_Name: Timeline Hint Marker
+  m_EditorClassIdentifier: 
+  m_Time: 17.8
+  hint: 0
 --- !u!114 &-4636857065413987179
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1406,6 +1434,8 @@ MonoBehaviour:
     - {fileID: 3165679299477898630}
     - {fileID: 4952974447876580968}
     - {fileID: -6352962478924260785}
+    - {fileID: -8512490073894973115}
+    - {fileID: -4968501749951335184}
 --- !u!114 &1510302968524926881
 MonoBehaviour:
   m_ObjectHideFlags: 1

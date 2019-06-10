@@ -1418,12 +1418,7 @@ PrefabInstance:
     - target: {fileID: 251473114935734316, guid: 6f7ec1446a41d51439376b3b7a8b4444,
         type: 3}
       propertyPath: m_Name
-      value: Quest Hint UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 251473114935734316, guid: 6f7ec1446a41d51439376b3b7a8b4444,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      value: Quest Hint Service
       objectReference: {fileID: 0}
     - target: {fileID: 3942547628095949780, guid: 6f7ec1446a41d51439376b3b7a8b4444,
         type: 3}
@@ -1479,16 +1474,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 647697904504478086, guid: 6f7ec1446a41d51439376b3b7a8b4444,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -65.11499
-      objectReference: {fileID: 0}
-    - target: {fileID: 647697904504478086, guid: 6f7ec1446a41d51439376b3b7a8b4444,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -337.09998
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f7ec1446a41d51439376b3b7a8b4444, type: 3}
