@@ -29,6 +29,8 @@ public class ScenarioItemInteractionFlagTrigger : MonoBehaviour
 
     private void TriggerInteractionStartEvent()
     {
+        Debug.Log("TriggerInteractionStartEvent");
+
         if (interactionStartFlag != ScenarioFlag.None)
         {
             flagService.AddFlag(interactionStartFlag);
