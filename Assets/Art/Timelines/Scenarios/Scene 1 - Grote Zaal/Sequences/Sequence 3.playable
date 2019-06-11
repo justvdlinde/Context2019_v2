@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b58daec416ecb4ba5dc818c86a517c, type: 3}
   m_Name: Timeline Hint Marker
   m_EditorClassIdentifier: 
-  m_Time: 0.16666666666666666
+  m_Time: 0.08333333333333333
   hint: 0
 --- !u!114 &-8506400236294425525
 MonoBehaviour:
@@ -483,7 +483,7 @@ MonoBehaviour:
   m_Name: Timeline Hint Marker
   m_EditorClassIdentifier: 
   m_Time: 17.8
-  hint: 0
+  hint: -131762
 --- !u!114 &-4636857065413987179
 MonoBehaviour:
   m_ObjectHideFlags: 1

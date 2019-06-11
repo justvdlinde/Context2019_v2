@@ -25,6 +25,8 @@ MonoBehaviour:
     m_Objects:
     - {fileID: -1859380134411838838}
     - {fileID: 3568319561034018826}
+    - {fileID: -8408843144147876527}
+    - {fileID: 7442190253289326781}
 --- !u!114 &-8492832298534831924
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -46,6 +48,20 @@ MonoBehaviour:
   m_ApplyFootIK: 1
   m_Version: 1
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+--- !u!114 &-8408843144147876527
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82b58daec416ecb4ba5dc818c86a517c, type: 3}
+  m_Name: Timeline Hint Marker
+  m_EditorClassIdentifier: 
+  m_Time: 4.783333333333333
+  hint: -164786
 --- !u!114 &-8366382355978332196
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1039,6 +1055,20 @@ MonoBehaviour:
   m_ApplyFootIK: 1
   m_Version: 1
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+--- !u!114 &7442190253289326781
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82b58daec416ecb4ba5dc818c86a517c, type: 3}
+  m_Name: Timeline Hint Marker
+  m_EditorClassIdentifier: 
+  m_Time: 0.03333333333333333
+  hint: 0
 --- !u!114 &7719310353377973791
 MonoBehaviour:
   m_ObjectHideFlags: 1
