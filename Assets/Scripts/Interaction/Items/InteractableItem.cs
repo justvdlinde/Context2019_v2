@@ -27,8 +27,8 @@ public class InteractableItem : MonoBehaviour, IInteractable
 
     [SerializeField, HideInInspector] private GameObject gObject;
     [SerializeField, HideInInspector] private new Collider collider;
-    [SerializeField, HideInInspector] private MeshRenderer mRendererParent;
-    [SerializeField, HideInInspector] private MeshRenderer mRenderer;
+    //[SerializeField, HideInInspector] private MeshRenderer mRendererParent;
+    //[SerializeField, HideInInspector] private MeshRenderer mRenderer;
 
     private new Rigidbody rigidbody;
     private bool colliderWasEnabledBeforeInteraction;
@@ -39,17 +39,16 @@ public class InteractableItem : MonoBehaviour, IInteractable
         gObject = gameObject;
         collider = GetComponent<Collider>();
         rigidbody = GetComponent<Rigidbody>();
-        if (isViewable)
-        {
-            mRenderer = GetComponent<MeshRenderer>();
-            mRendererParent = mRenderer.transform.parent.GetComponent<MeshRenderer>();
-        }
+        //if (isViewable)
+        //{
+        //    mRenderer = GetComponent<MeshRenderer>();
+        //    mRendererParent = mRenderer.transform.parent.GetComponent<MeshRenderer>();
+        //}
     }
 
     private void Start()
     {
         Show(!hideAtStart);
-
     }
 
     public void OnInteractionStart()
@@ -57,11 +56,11 @@ public class InteractableItem : MonoBehaviour, IInteractable
         colliderWasEnabledBeforeInteraction = collider.enabled;
         collider.enabled = false;
 
-        if (isViewable)
-        {
-            mRendererParent.enabled = false;
-            mRenderer.enabled = true;
-        }
+        //if (isViewable)
+        //{
+        //    mRendererParent.enabled = false;
+        //    mRenderer.enabled = true;
+        //}
         if (rigidbody != null)
         {
             rigidbodyWasKinematicBeforeInteraction = rigidbody.isKinematic;
@@ -75,11 +74,11 @@ public class InteractableItem : MonoBehaviour, IInteractable
     {
         InteractionStopEvent?.Invoke();
 
-        if (isViewable)
-        {
-            mRenderer.enabled = false;
-            mRendererParent.enabled = true;
-        }
+        //if (isViewable)
+        //{
+        //    mRenderer.enabled = false;
+        //    mRendererParent.enabled = true;
+        //}
 
         if (destroyAfterInteraction)
         {
