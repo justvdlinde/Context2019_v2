@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.EventSystems;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Toggle))]
@@ -14,8 +11,6 @@ public class ToggleColorSwitcher : MonoBehaviour
     [SerializeField, HideInInspector] private Toggle toggle;
     [SerializeField, HideInInspector] private Image image;
 
-    private ColorBlock colorBlock;
-
     private void OnValidate()
     {
         toggle = GetComponent<Toggle>();
@@ -24,8 +19,7 @@ public class ToggleColorSwitcher : MonoBehaviour
 
     private void Start()
     {
-        colorBlock = toggle.colors;
-
+        OnToggleValueChanged(toggle.isOn);
         toggle.onValueChanged.AddListener(OnToggleValueChanged);
     }
 

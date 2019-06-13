@@ -168,6 +168,7 @@ GameObject:
   - component: {fileID: 6526397118003995261}
   - component: {fileID: 4370617828519634513}
   - component: {fileID: 1744145401850466951}
+  - component: {fileID: 4643332626183720701}
   m_Layer: 5
   m_Name: Info Button
   m_TagString: Untagged
@@ -187,12 +188,12 @@ RectTransform:
   m_LocalScale: {x: 0.99710643, y: 0.99710643, z: 0.997106}
   m_Children: []
   m_Father: {fileID: 4056517321729101880}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 359.999}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: -1871.3318}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -1295.63}
+  m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6526397118003995261
 CanvasRenderer:
@@ -249,7 +250,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -280,6 +281,22 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 1
+--- !u!114 &4643332626183720701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2384835668623431959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75f717364a04d2a4cb9626351d06c247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OFFColor: {r: 0.4039216, g: 0.4039216, b: 0.4039216, a: 1}
+  ONColor: {r: 1, g: 1, b: 1, a: 1}
+  toggle: {fileID: 1744145401850466951}
+  image: {fileID: 4370617828519634513}
 --- !u!114 &461788200877562278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,6 +330,7 @@ GameObject:
   - component: {fileID: 8218232709432161680}
   - component: {fileID: 7186777388491158185}
   - component: {fileID: 5513922235677297972}
+  - component: {fileID: 8999874380289099109}
   m_Layer: 5
   m_Name: Options Button
   m_TagString: Untagged
@@ -332,12 +350,12 @@ RectTransform:
   m_LocalScale: {x: 0.99710643, y: 0.99710643, z: 0.997106}
   m_Children: []
   m_Father: {fileID: 4056517321729101880}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 269.999}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: -1776.3318}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -1390.63}
+  m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8218232709432161680
 CanvasRenderer:
@@ -394,7 +412,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -425,6 +443,22 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
+--- !u!114 &8999874380289099109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5356772479523727173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75f717364a04d2a4cb9626351d06c247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OFFColor: {r: 0.4039216, g: 0.4039216, b: 0.4039216, a: 1}
+  ONColor: {r: 1, g: 1, b: 1, a: 1}
+  toggle: {fileID: 5513922235677297972}
+  image: {fileID: 7186777388491158185}
 --- !u!1001 &2992096728530171237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -500,37 +534,42 @@ PrefabInstance:
     - target: {fileID: 3943352542096050267, guid: ce3cbbaf0b9028047ab1e0604874e10d,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3943352542096050267, guid: ce3cbbaf0b9028047ab1e0604874e10d,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3943352542096050267, guid: ce3cbbaf0b9028047ab1e0604874e10d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 3943352542096050267, guid: ce3cbbaf0b9028047ab1e0604874e10d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1966.3318
+      value: -1485.63
       objectReference: {fileID: 0}
     - target: {fileID: 3943352542096050267, guid: ce3cbbaf0b9028047ab1e0604874e10d,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 3943352542096050267, guid: ce3cbbaf0b9028047ab1e0604874e10d,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 4134199726863480758, guid: ce3cbbaf0b9028047ab1e0604874e10d,
         type: 3}
       propertyPath: m_Depth
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5291779182266109794, guid: ce3cbbaf0b9028047ab1e0604874e10d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 157915796058890653, guid: ce3cbbaf0b9028047ab1e0604874e10d,
         type: 3}

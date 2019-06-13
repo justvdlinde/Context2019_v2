@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2789632418192205929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 569f154b6bcf0514da93ffd634366769, type: 3}
+  m_Name: Return Ledger
+  m_EditorClassIdentifier: 
+  hash: -67668
+  hint: Breng het grootboek naar Johan III
+--- !u!114 &-679337793554680220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 569f154b6bcf0514da93ffd634366769, type: 3}
+  m_Name: Fire Cannon
+  m_EditorClassIdentifier: 
+  hash: -141802
+  hint: Schiet het kannon!
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0d2935ab8af8bb459ea9c90c1aa0c54, type: 3}
+  m_Name: Scenario Hints
+  m_EditorClassIdentifier: 
+  collection:
+  - {fileID: 7238692730644441901}
+  - {fileID: -2789632418192205929}
+  - {fileID: 7401084585207856070}
+  - {fileID: -679337793554680220}
+  - {fileID: 5406707641071632367}
+  - {fileID: 4045505744281140827}
+--- !u!114 &4045505744281140827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 569f154b6bcf0514da93ffd634366769, type: 3}
+  m_Name: Open Gate
+  m_EditorClassIdentifier: 
+  hash: -164786
+  hint: Open de Grote Poort
+--- !u!114 &5406707641071632367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 569f154b6bcf0514da93ffd634366769, type: 3}
+  m_Name: Go to Gate Scene
+  m_EditorClassIdentifier: 
+  hash: -159324
+  hint: Volg Johan en Zweder naar de Grote Poort
+--- !u!114 &7238692730644441901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 569f154b6bcf0514da93ffd634366769, type: 3}
+  m_Name: Collect Ledger
+  m_EditorClassIdentifier: 
+  hash: -66338
+  hint: Zoek het grootboek op de tafel in de Grote Zaal.
+--- !u!114 &7401084585207856070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 569f154b6bcf0514da93ffd634366769, type: 3}
+  m_Name: Go to Tower Scene
+  m_EditorClassIdentifier: 
+  hash: -131762
+  hint: Volg Johan en Zweder naar de Witte Toren

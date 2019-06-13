@@ -7,7 +7,7 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class InteractableItem : MonoBehaviour, IInteractable
 {
-    [SerializeField][ItemID] private int id;
+    [SerializeField] [ItemID] private int id;
     public int ID => id;
 
     public GameObject GameObject { get { return gObject; } }
@@ -27,8 +27,8 @@ public class InteractableItem : MonoBehaviour, IInteractable
 
     [SerializeField, HideInInspector] private GameObject gObject;
     [SerializeField, HideInInspector] private new Collider collider;
-    [SerializeField, HideInInspector] private MeshRenderer mRendererParent;
-    [SerializeField, HideInInspector] private MeshRenderer mRenderer;
+    //[SerializeField, HideInInspector] private MeshRenderer mRendererParent;
+    //[SerializeField, HideInInspector] private MeshRenderer mRenderer;
 
     private new Rigidbody rigidbody;
     private bool colliderWasEnabledBeforeInteraction;
@@ -39,24 +39,29 @@ public class InteractableItem : MonoBehaviour, IInteractable
         gObject = gameObject;
         collider = GetComponent<Collider>();
         rigidbody = GetComponent<Rigidbody>();
-        mRenderer = GetComponent<MeshRenderer>();
-        mRendererParent = GetComponentInParent<MeshRenderer>();
+        //if (isViewable)
+        //{
+        //    mRenderer = GetComponent<MeshRenderer>();
+        //    mRendererParent = mRenderer.transform.parent.GetComponent<MeshRenderer>();
+        //}
     }
 
     private void Start()
     {
         Show(!hideAtStart);
-
     }
 
     public void OnInteractionStart()
     {
         colliderWasEnabledBeforeInteraction = collider.enabled;
         collider.enabled = false;
-        mRendererParent.enabled = false;
-        mRenderer.enabled = true;
 
-        if(rigidbody != null)
+        //if (isViewable)
+        //{
+        //    mRendererParent.enabled = false;
+        //    mRenderer.enabled = true;
+        //}
+        if (rigidbody != null)
         {
             rigidbodyWasKinematicBeforeInteraction = rigidbody.isKinematic;
             rigidbody.isKinematic = true;
@@ -64,12 +69,16 @@ public class InteractableItem : MonoBehaviour, IInteractable
 
         InteractionStartEvent?.Invoke();
     }
-    
+
     public void OnInteractionStop()
     {
         InteractionStopEvent?.Invoke();
-        mRenderer.enabled = false;
-        mRendererParent.enabled = true;
+
+        //if (isViewable)
+        //{
+        //    mRenderer.enabled = false;
+        //    mRendererParent.enabled = true;
+        //}
 
         if (destroyAfterInteraction)
         {

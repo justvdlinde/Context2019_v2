@@ -10,11 +10,14 @@ EditorBuildSettings:
     guid: 1a091d2be1c04074db99183e89f6285e
   - enabled: 1
     path: Assets/Scenes/Main.unity
-    guid: c4e8d59f98e352c46af6fb61d5216040
+    guid: 4be2c27140f93ae4a9ee6e599605fc71
   - enabled: 1
     path: Assets/Scenes/Art/GreatHall/GreatHall_V1.unity
     guid: 7bd022c0eeff82242a44ec7f85e577fd
   - enabled: 1
     path: Assets/Scenes/Art/TowerScene/TowerScene_V1.unity
     guid: be3a7fd3682a021468b1420061a68480
+  - enabled: 1
+    path: Assets/Scenes/Art/CastleGateScene.unity
+    guid: a00f3184823dd6a4e9473f921ffd25a7
   m_configObjects: {}
