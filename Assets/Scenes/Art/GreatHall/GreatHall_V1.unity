@@ -745,6 +745,66 @@ PrefabInstance:
       propertyPath: startup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: sitting
       objectReference: {fileID: 0}
+    - target: {fileID: 3139326172419536370, guid: f4e445331881f9944b0b38e106e1043c,
+        type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3139326172419536370, guid: f4e445331881f9944b0b38e106e1043c,
+        type: 3}
+      propertyPath: m_Pitch
+      value: 1.0670979
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542353491071513153, guid: f4e445331881f9944b0b38e106e1043c,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.14345604
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542353491071513153, guid: f4e445331881f9944b0b38e106e1043c,
+        type: 3}
+      propertyPath: m_Pitch
+      value: 1.0003169
+      objectReference: {fileID: 0}
+    - target: {fileID: 3488203515273544906, guid: f4e445331881f9944b0b38e106e1043c,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.3753992
+      objectReference: {fileID: 0}
+    - target: {fileID: 3488203515273544906, guid: f4e445331881f9944b0b38e106e1043c,
+        type: 3}
+      propertyPath: m_Pitch
+      value: 1.0047457
+      objectReference: {fileID: 0}
+    - target: {fileID: 806433771900034998, guid: f4e445331881f9944b0b38e106e1043c,
+        type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 806433771900034998, guid: f4e445331881f9944b0b38e106e1043c,
+        type: 3}
+      propertyPath: m_Pitch
+      value: 1.0376148
+      objectReference: {fileID: 0}
+    - target: {fileID: 847960750343450394, guid: f4e445331881f9944b0b38e106e1043c,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 847960750343450394, guid: f4e445331881f9944b0b38e106e1043c,
+        type: 3}
+      propertyPath: m_Pitch
+      value: 0.95245886
+      objectReference: {fileID: 0}
+    - target: {fileID: 1462802218120775212, guid: f4e445331881f9944b0b38e106e1043c,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.27033693
+      objectReference: {fileID: 0}
+    - target: {fileID: 1462802218120775212, guid: f4e445331881f9944b0b38e106e1043c,
+        type: 3}
+      propertyPath: m_Pitch
+      value: 1.0080621
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e445331881f9944b0b38e106e1043c, type: 3}
 --- !u!1 &12561803
