@@ -557,7 +557,7 @@ GameObject:
   - component: {fileID: 2141806188}
   - component: {fileID: 2141806187}
   m_Layer: 0
-  m_Name: Mobile Orientation Manager
+  m_Name: Mobile Settings Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
