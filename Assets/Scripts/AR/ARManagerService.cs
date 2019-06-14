@@ -2,6 +2,7 @@
 using ServiceLocatorNamespace;
 using System;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class ARManagerService : MonoBehaviour, IService
 {
@@ -37,8 +38,10 @@ public class ARManagerService : MonoBehaviour, IService
 
         if (enable)
         {
-            backgroundRenderer.m_BackgroundRenderer.mode = UnityEngine.XR.ARRenderMode.MaterialAsBackground;
+            backgroundRenderer.m_BackgroundRenderer.mode = ARRenderMode.MaterialAsBackground;
         }
+
+        backgroundRenderer.m_BackgroundRenderer.mode = (enable) ? ARRenderMode.MaterialAsBackground : ARRenderMode.StandardBackground;
 #endif
     }
 }
