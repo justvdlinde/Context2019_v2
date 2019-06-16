@@ -6,7 +6,9 @@ public class MobileSettingsManager : MonoBehaviour
 
     private void Start()
     {
-        Screen.sleepTimeout = SleepTimeout.NeverSleep;
+        DontDestroyOnLoad(gameObject);
+
         Screen.orientation = orientation;
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
     }
 }

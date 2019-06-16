@@ -2,6 +2,8 @@
 using ServiceLocatorNamespace;
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.XR;
 
 public class ARManagerService : MonoBehaviour, IService
 {
@@ -27,6 +29,21 @@ public class ARManagerService : MonoBehaviour, IService
         DontDestroyOnLoad(this);
     }
 
+    private void OnEnable()
+    {
+        SceneManager.activeSceneChanged += OnSceneChangeEvent;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.activeSceneChanged -= OnSceneChangeEvent;
+    }
+
+    private void OnSceneChangeEvent(Scene from, Scene to)
+    {
+        EnableBackgroundRenderer(false);
+    }
+
     public void EnableAR(bool enable)
     {
 #if !UNITY_EDITOR
@@ -35,10 +52,12 @@ public class ARManagerService : MonoBehaviour, IService
         session.enabled = enable;
         sessionController.enabled = enable;
 
-        if (enable)
-        {
-            backgroundRenderer.m_BackgroundRenderer.mode = UnityEngine.XR.ARRenderMode.MaterialAsBackground;
-        }
+        EnableBackgroundRenderer(enable);
 #endif
+    }
+
+    public void EnableBackgroundRenderer(bool enable)
+    {
+        backgroundRenderer.m_BackgroundRenderer.mode = (enable) ? ARRenderMode.MaterialAsBackground : ARRenderMode.StandardBackground;
     }
 }

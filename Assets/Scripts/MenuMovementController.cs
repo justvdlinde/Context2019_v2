@@ -57,8 +57,8 @@ public class MenuMovementController : MonoBehaviour
     {
         if (playerInput.IsPressed)
         {
-            horizontalDegree += playerInput.PositionDelta.x * horizontalRotationSpeed * 0.02f;
-            verticalDegree -= playerInput.PositionDelta.y * verticalRotationSpeed * 0.02f;
+            horizontalDegree += playerInput.PositionDelta.x * horizontalRotationSpeed * Time.deltaTime;
+            verticalDegree -= playerInput.PositionDelta.y * verticalRotationSpeed * Time.deltaTime;
             verticalDegree = ClampAngle(verticalDegree, verticalRotationLimit.min, verticalRotationLimit.max);
             verticalDegree = Mathf.Clamp(verticalDegree, minVerticalDegree, 360);
         }
