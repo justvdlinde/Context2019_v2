@@ -18,7 +18,7 @@ public class InteractableItem : MonoBehaviour, IInteractable
 
     public bool HideAtStart => hideAtStart;
     [SerializeField] private bool hideAtStart;
-
+    [SerializeField] private bool hasOutline;
     [SerializeField] private bool isViewable;
     public bool IsViewable => isViewable;
 
@@ -27,6 +27,7 @@ public class InteractableItem : MonoBehaviour, IInteractable
 
     [SerializeField, HideInInspector] private GameObject gObject;
     [SerializeField, HideInInspector] private new Collider collider;
+    [SerializeField, HideInInspector] private MeshRenderer mRendererOutline;
     [SerializeField, HideInInspector] private MeshRenderer mRendererParent;
     [SerializeField, HideInInspector] private MeshRenderer mRenderer;
 
@@ -39,10 +40,11 @@ public class InteractableItem : MonoBehaviour, IInteractable
         gObject = gameObject;
         collider = GetComponent<Collider>();
         rigidbody = GetComponent<Rigidbody>();
-        if (isViewable)
+        if (hasOutline)
         {
             mRenderer = GetComponent<MeshRenderer>();
             mRendererParent = mRenderer.transform.parent.GetComponent<MeshRenderer>();
+            mRendererOutline = GetComponentInChildren<MeshRenderer>();
         }
     }
 
@@ -57,8 +59,9 @@ public class InteractableItem : MonoBehaviour, IInteractable
         colliderWasEnabledBeforeInteraction = collider.enabled;
         collider.enabled = false;
 
-        if (isViewable)
+        if (hasOutline)
         {
+            mRendererOutline.enabled = false;
             mRendererParent.enabled = false;
             mRenderer.enabled = true;
         }
@@ -75,10 +78,11 @@ public class InteractableItem : MonoBehaviour, IInteractable
     {
         InteractionStopEvent?.Invoke();
 
-        if (isViewable)
+        if (hasOutline)
         {
             mRenderer.enabled = false;
             mRendererParent.enabled = true;
+            mRendererOutline.enabled = true;
         }
 
         if (destroyAfterInteraction)
