@@ -5404,6 +5404,7 @@ GameObject:
   - component: {fileID: 1130734439}
   - component: {fileID: 1137114441}
   - component: {fileID: 6620526856686885225}
+  - component: {fileID: 1901601863}
   m_Layer: 0
   m_Name: Kannon
   m_TagString: Untagged
@@ -5503,19 +5504,8 @@ MonoBehaviour:
   interactionStartEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3788517333810109040}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1636392874623684696}
-        m_MethodName: Play
+      - m_Target: {fileID: 1901601863}
+        m_MethodName: OnInteractionStart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5524,39 +5514,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1137114441}
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1130734439}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 6620526856686885225}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
@@ -5687,6 +5644,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionStartHint: 0
+--- !u!114 &1901601863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784151407907074506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b04f7add5e85044a8ee4bfcecfe63ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collider: {fileID: 3788517333810109040}
+  particleSystem: {fileID: 1636392874623684696}
+  audioSource: {fileID: 1137114441}
+  flagTrigger: {fileID: 1130734439}
+  hintTrigger: {fileID: 6620526856686885225}
+  shakeDuration: 1
+  magnitudeStrength: 0.3
+  magnitudeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0.0015368462
+      inSlope: -2.913094
+      outSlope: -2.913094
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.08587074
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &7980412765274855645
 GameObject:
   m_ObjectHideFlags: 0
