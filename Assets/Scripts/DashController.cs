@@ -6,6 +6,14 @@ public class DashController : MonoBehaviour
     [SerializeField] private Button dashButton;
     [SerializeField] private float movementSpeed = 1;
 
+    private ARManagerService arManager;
+
+    private void Start()
+    {
+        arManager = ServiceLocatorNamespace.ServiceLocator.Instance.Get<ARManagerService>() as ARManagerService;
+    }
+
+
     private void OnEnable()
     {
         dashButton.onClick.AddListener(Dash);
@@ -18,6 +26,7 @@ public class DashController : MonoBehaviour
 
     public void Dash()
     {
-        Camera.main.transform.position += Camera.main.transform.forward * movementSpeed * Time.deltaTime;
+        Vector3 newPos = Camera.main.transform.position += Camera.main.transform.forward * movementSpeed * Time.deltaTime;
+        arManager.MovePosition(newPos);
     }
 }
