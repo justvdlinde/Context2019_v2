@@ -60,7 +60,9 @@ public class ARManagerService : MonoBehaviour, IService
 
     public void EnableBackgroundRenderer(bool enable)
     {
-        backgroundRenderer.m_BackgroundRenderer.mode = (enable) ? ARRenderMode.MaterialAsBackground : ARRenderMode.StandardBackground;
+        if (backgroundRenderer.isActiveAndEnabled) {
+            backgroundRenderer.m_BackgroundRenderer.mode = (enable) ? ARRenderMode.MaterialAsBackground : ARRenderMode.StandardBackground;
+        }
     }
 
     public void MovePosition(Vector3 newPosition)

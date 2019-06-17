@@ -11,9 +11,10 @@ public class TrackedImageScene : TrackedImageObject
     private ARSceneAnchor sceneAnchor;
     private SceneManagerService sceneManager;
 
-    private void Start()
+    private void Awake()
     {
         sceneManager = ServiceLocatorNamespace.ServiceLocator.Instance.Get<SceneManagerService>() as SceneManagerService;
+        sceneAnchor = FindObjectOfType<ARSceneAnchor>();
     }
 
     public override void Show(AugmentedImage image)
