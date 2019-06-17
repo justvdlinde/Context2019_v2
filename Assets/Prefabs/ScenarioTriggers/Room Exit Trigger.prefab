@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0efffc20cc35cae41851da01b3d781de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuScreen: {fileID: 0}
+  menuScene: Assets/Scenes/Main.unity
 --- !u!114 &3535385502632113617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,8 +75,8 @@ MonoBehaviour:
   onFlagAddedEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4590255545787615641}
-        m_MethodName: SetActive
+      - m_Target: {fileID: 5699345810442125210}
+        m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

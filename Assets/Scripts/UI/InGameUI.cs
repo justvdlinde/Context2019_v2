@@ -75,6 +75,7 @@ public class InGameUI : MonoBehaviour
     private void OnHomeButtonPressedEvent()
     {
         sidebar.Close();
+        (ServiceLocator.Instance.Get<ARManagerService>() as ARManagerService).EnableAR(false);
         sceneManager.LoadScene(menuScene);
     }
 
