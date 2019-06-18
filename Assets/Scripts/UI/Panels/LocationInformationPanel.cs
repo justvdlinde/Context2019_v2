@@ -9,7 +9,7 @@ public class LocationInformationPanel : MonoBehaviour
     [SerializeField] private LocationScenarioFlagPair[] locationScenarioPair;
 
     [Header("Child References")]
-    [SerializeField] private Image markerImage;
+    [SerializeField] private RawImage markerImage;
     [SerializeField] private TextMeshProUGUI title;
     [SerializeField] private TextMeshProUGUI information;
     [SerializeField] private TextMeshProUGUI itemsFoundValue;
@@ -52,24 +52,26 @@ public class LocationInformationPanel : MonoBehaviour
         title.text = data.Name;
         information.text = data.Description;
 
-        storyCompletedToggle.isOn = CompletedStoryForScenario(data);
+        LocationScenarioFlagPair locationInfo = locationScenarioPair[GetLocationIndex(data)];
+        markerImage.texture = locationInfo.markerTexture;
+        storyCompletedToggle.isOn = flagService.FlagConditionHasBeenMet(locationInfo.scenarioFlag);
 
         // TODO: fill correct value:
         itemsFoundValue.text = "0/0";
     }
 
-    private bool CompletedStoryForScenario(LocationsData data)
+    private int GetLocationIndex(LocationsData data)
     {
-        for(int i = 0; i < locationScenarioPair.Length; i++)
+        for (int i = 0; i < locationScenarioPair.Length; i++)
         {
             LocationsData d = locationService.GetLocationData(locationScenarioPair[i].location);
-            if(data == d)
+            if (data == d)
             {
-                return flagService.FlagConditionHasBeenMet(locationScenarioPair[i].scenarioFlag);
+                return i;
             }
         }
 
-        return false;
+        return -1;
     }
 }
 
@@ -78,4 +80,5 @@ public class LocationScenarioFlagPair
 {
     [LocationID] public int location;
     [ScenarioFlag] public int scenarioFlag;
+    public Texture markerTexture;
 }
