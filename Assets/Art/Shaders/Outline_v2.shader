@@ -84,7 +84,7 @@
 					triStream.Append(OUT);
 				}
 
-				[maxvertexcount(12)]
+				[maxvertexcount(50)]
 				void geom(triangle v2g IN[3], inout TriangleStream<v2g> triStream)
 				{
 					geom2(IN[0], IN[1], triStream);

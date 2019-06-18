@@ -61,6 +61,7 @@ public class InteractableItem : MonoBehaviour, IInteractable
 
         if (hasOutline)
         {
+            Debug.Log("Picked up " + gameObject.name);
             mRendererOutline.enabled = false;
             mRendererParent.enabled = false;
             mRenderer.enabled = true;
@@ -80,9 +81,10 @@ public class InteractableItem : MonoBehaviour, IInteractable
 
         if (hasOutline)
         {
-            mRenderer.enabled = false;
+            Debug.Log("Put down " + gameObject.name);
             mRendererParent.enabled = true;
             mRendererOutline.enabled = true;
+            mRenderer.enabled = false;
         }
 
         if (destroyAfterInteraction)
