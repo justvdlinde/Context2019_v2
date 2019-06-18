@@ -6,11 +6,13 @@ public class MenuLocationHandler : MonoBehaviour
 {
     [SerializeField] private MenuLocationInfoUI locationUI;
     [SerializeField] private new Camera camera;
+    [SerializeField] private float maxSelectionOffset = 10;
 
     private LocationDatabaseService locationsService;
     private RaycastHit hit;
     private Ray ray;
     private Location selectedLocation;
+    private Vector3 positionOnMouseDown;
 
     private void Start()
     {
@@ -21,7 +23,15 @@ public class MenuLocationHandler : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            OnClick();
+            positionOnMouseDown = Input.mousePosition;
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            if (Vector3.Distance(positionOnMouseDown, Input.mousePosition) < maxSelectionOffset)
+            { 
+                OnClick();
+            }
         }
     }
 
