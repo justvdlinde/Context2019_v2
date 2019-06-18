@@ -12,15 +12,26 @@ public class GameOverMessageHandler : MonoBehaviour
     private ScenarioFlagsService flagService;
     private PopupService popupService;
 
+    private static GameOverMessageHandler Instance;
+
     private void Start()
     {
         flagService = ServiceLocator.Instance.Get<ScenarioFlagsService>() as ScenarioFlagsService;
         popupService = ServiceLocator.Instance.Get<PopupService>() as PopupService;
 
-        DontDestroyOnLoad(gameObject);
         flagService.FlagAdded += OnFlagAddedEvent;
+
+        if (Instance == null)
+        {
+            Instance = this; 
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
-    
+
     private void OnFlagAddedEvent(ScenarioFlag flag)
     {
         if(flag.Hash == finalFlag)
