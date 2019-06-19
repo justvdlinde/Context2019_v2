@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 69.099976, y: 830.1997}
-  m_SizeDelta: {x: -185.79999, y: -1866}
+  m_AnchoredPosition: {x: 69.099976, y: 176.47}
+  m_SizeDelta: {x: -185.8, y: -558.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8363420271262006608
 CanvasRenderer:
@@ -67,8 +67,9 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Item Title
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1683c6b6d36ab4f4d990f82bf26ed341, type: 2}
+  m_sharedMaterial: {fileID: -6531126351601809499, guid: 1683c6b6d36ab4f4d990f82bf26ed341,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -110,7 +111,7 @@ MonoBehaviour:
   m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -280,8 +281,9 @@ MonoBehaviour:
     eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
     vel, aliquet nec, vulputate eget, arcu. In enim just
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f9f197b1fee2cdd48b6f97f035ff532a, type: 2}
+  m_sharedMaterial: {fileID: 1072831951666854237, guid: f9f197b1fee2cdd48b6f97f035ff532a,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -323,7 +325,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 312
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -352,7 +354,7 @@ MonoBehaviour:
     spaceCount: 54
     wordCount: 55
     linkCount: 0
-    lineCount: 11
+    lineCount: 18
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0

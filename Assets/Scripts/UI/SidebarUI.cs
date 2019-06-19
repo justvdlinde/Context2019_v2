@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(AudioSource))]
 public class SidebarUI : MonoBehaviour
 {
     [SerializeField] private Button openSidebarButton;
@@ -10,11 +11,23 @@ public class SidebarUI : MonoBehaviour
     [SerializeField] private Transform sidebar;
     [SerializeField] private ToggleGroup toggleGroup;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip sidebarOpen;
+    [SerializeField] private AudioClip sidebarClose;
+
     public const string ANIMATOR_OPEN_TRIGGER = "Open";
     public const string ANIMATOR_CLOSE_TRIGGER = "Close";
+    public static bool IsOpen { get; private set; }
 
     public Action OpenEvent;
     public Action CloseEvent;
+
+    private AudioSource audioSource;
+
+    private void OnValidate()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     protected virtual void Awake()
     {
@@ -37,15 +50,18 @@ public class SidebarUI : MonoBehaviour
     private void OnCloseButtonClickedEvent()
     {
         Close();
+        IsOpen = false;
     }
 
     private void OnOpenButtonClickedEvent()
     {
         Open();
+        IsOpen = true;
     }
 
     public void Close()
     {
+        audioSource.PlayOneShot(sidebarClose);
         animator.enabled = true;
         animator.SetTrigger(ANIMATOR_CLOSE_TRIGGER);
 
@@ -54,6 +70,7 @@ public class SidebarUI : MonoBehaviour
 
     public void Open()
     {
+        audioSource.PlayOneShot(sidebarOpen);
         animator.enabled = true;
         animator.SetTrigger(ANIMATOR_OPEN_TRIGGER);
 
