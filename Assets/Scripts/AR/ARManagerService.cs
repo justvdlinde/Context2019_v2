@@ -19,7 +19,7 @@ public class ARManagerService : MonoBehaviour, IService
 
     private void Awake()
     {
-        if(ServiceLocator.Instance.ContainsService<ARManagerService>())
+        if (ServiceLocator.Instance.ContainsService<ARManagerService>())
         {
             Destroy(gameObject);
             return;
@@ -60,9 +60,7 @@ public class ARManagerService : MonoBehaviour, IService
 
     public void EnableBackgroundRenderer(bool enable)
     {
-        if (backgroundRenderer.isActiveAndEnabled) {
-            backgroundRenderer.m_BackgroundRenderer.mode = (enable) ? ARRenderMode.MaterialAsBackground : ARRenderMode.StandardBackground;
-        }
+        backgroundRenderer.m_BackgroundRenderer.mode = (enable) ? ARRenderMode.MaterialAsBackground : ARRenderMode.StandardBackground;
     }
 
     public void MovePosition(Vector3 newPosition)
