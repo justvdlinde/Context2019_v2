@@ -24,8 +24,6 @@ public class ItemCollectionService : IService
     {
         ItemCollection itemsInScene = ItemCollections[scene];
 
-        Debug.Log("items collected " + collectedItems.Count);
-
         int count = 0;
         foreach(int itemID in itemsInScene.items)
         {

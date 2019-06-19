@@ -47,11 +47,8 @@ public class MenuLocationHandler : MonoBehaviour
             {
                 return;
             }
-            else
-            {
-                location = obj as Location;
-            }
 
+            location = obj as Location;
             if (location != null)
             {
                 OnInteractableObjectHit(location);
