@@ -67,8 +67,6 @@ namespace ServiceLocatorNamespace
 
         private IService CreateNewServiceInstance(Type serviceType)
         {
-            Debug.Log("creating new service instance of type " + serviceType.Name);
-
             IService service = (IService)Activator.CreateInstance(serviceType);
             AddService(service);
 
@@ -79,7 +77,6 @@ namespace ServiceLocatorNamespace
         {
             if (!InstantiatedServices.ContainsKey(service.GetType()))
             {
-                Debug.Log("Adding service of type" + service.ToString());
                 InstantiatedServices.Add(service.GetType(), service);
             }
         }
