@@ -13,7 +13,6 @@ public class DashController : MonoBehaviour
         arManager = ServiceLocatorNamespace.ServiceLocator.Instance.Get<ARManagerService>() as ARManagerService;
     }
 
-
     private void OnEnable()
     {
         dashButton.onClick.AddListener(Dash);
@@ -26,7 +25,13 @@ public class DashController : MonoBehaviour
 
     public void Dash()
     {
-        Vector3 newPos = Camera.main.transform.position += Camera.main.transform.forward * movementSpeed * Time.deltaTime;
+        Vector3 newPos = Camera.main.transform.position + Camera.main.transform.forward * movementSpeed * Time.deltaTime;
+        newPos.y = Camera.main.transform.position.y;
+#if !UNITY_EDITOR
         arManager.MovePosition(newPos);
+#else
+        Camera.main.transform.position = newPos;
+#endif
+
     }
 }
