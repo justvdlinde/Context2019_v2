@@ -38,13 +38,11 @@ GraphicsSettings:
   - {fileID: 16000, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 16001, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 16003, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 210, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 0}
   - {fileID: 17000, guid: 0000000000000000f000000000000000, type: 0}
   m_PreloadedShaders:
-  - {fileID: 20000000, guid: 5b57b14288d4456408651e9bd40a5452, type: 2}
-  - {fileID: 20000000, guid: c4798d133a658c9488e0a838319fd86a, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   m_SpritesDefaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000,
     type: 0}
   m_CustomRenderPipeline: {fileID: 0}
@@ -55,7 +53,7 @@ GraphicsSettings:
   m_TierSettings: []
   m_LightmapStripping: 1
   m_FogStripping: 1
-  m_InstancingStripping: 0
+  m_InstancingStripping: 1
   m_LightmapKeepPlain: 0
   m_LightmapKeepDirCombined: 1
   m_LightmapKeepDynamicPlain: 0
@@ -63,7 +61,7 @@ GraphicsSettings:
   m_LightmapKeepShadowMask: 1
   m_LightmapKeepSubtractive: 0
   m_FogKeepLinear: 0
-  m_FogKeepExp: 1
+  m_FogKeepExp: 0
   m_FogKeepExp2: 0
   m_AlbedoSwatchInfos: []
   m_LightsUseLinearIntensity: 0
