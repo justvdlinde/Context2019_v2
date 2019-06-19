@@ -1,6 +1,4 @@
 ﻿using ServiceLocatorNamespace;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -20,7 +18,10 @@ public class ScenarioFlagListener : MonoBehaviour
 
     private void OnDestroy()
     {
-        flagService.FlagAdded -= OnFlagAdded;
+        if (flagService != null)
+        {
+            flagService.FlagAdded -= OnFlagAdded;
+        }
     }
 
     private void OnFlagAdded(ScenarioFlag flag)
