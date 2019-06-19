@@ -839,6 +839,12 @@ PrefabInstance:
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e445331881f9944b0b38e106e1043c, type: 3}
+--- !u!4 &9153494 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7725471577737668168, guid: f4e445331881f9944b0b38e106e1043c,
+    type: 3}
+  m_PrefabInstance: {fileID: 9153493}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &12561803
 GameObject:
   m_ObjectHideFlags: 0
@@ -15409,6 +15415,11 @@ PrefabInstance:
       propertyPath: m_textInfo.lineCount
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 412653747222728211, guid: 44319b856e6385f409d6b50b7f5838b5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 65.999985
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44319b856e6385f409d6b50b7f5838b5, type: 3}
 --- !u!114 &666196608 stripped
@@ -26041,6 +26052,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145718377}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1163293966
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 9153494}
+    m_Modifications:
+    - target: {fileID: 4590255545787615641, guid: 06de5469d0785414982e4604a92e1222,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590255545787615641, guid: 06de5469d0785414982e4604a92e1222,
+        type: 3}
+      propertyPath: m_Name
+      value: Room Exit Trigger (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1391921292500480213, guid: 06de5469d0785414982e4604a92e1222,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1391921292500480213, guid: 06de5469d0785414982e4604a92e1222,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1391921292500480213, guid: 06de5469d0785414982e4604a92e1222,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.089
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 06de5469d0785414982e4604a92e1222, type: 3}
 --- !u!1 &1169944285
 GameObject:
   m_ObjectHideFlags: 0
