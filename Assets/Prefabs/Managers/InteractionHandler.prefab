@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 760876543796065019}
   - component: {fileID: 760876543796065018}
+  - component: {fileID: 2561108378217318592}
   m_Layer: 0
   m_Name: InteractionHandler
   m_TagString: Untagged
@@ -44,3 +45,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rayDistance: 4
+--- !u!114 &2561108378217318592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760876543796065021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1ae18f1725a9ee4f9aec514bfb92593, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionHandler: {fileID: 760876543796065018}

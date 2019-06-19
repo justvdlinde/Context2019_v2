@@ -61,7 +61,7 @@ public class MenuLocationHandler : MonoBehaviour
 
     private void OnInteractableObjectHit(Location location)
     {
-        locationUI.Setup(locationsService.GetLocationData(location.ID));
+        locationUI.Setup(location.ID);
 
         if(selectedLocation != null)
         {

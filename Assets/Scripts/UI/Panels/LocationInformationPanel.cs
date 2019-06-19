@@ -18,6 +18,7 @@ public class LocationInformationPanel : MonoBehaviour
     private SceneManagerService sceneManager;
     private LocationDatabaseService locationService;
     private ScenarioFlagsService flagService;
+    private ItemCollectionService itemCollectionService;
 
     private bool init;
 
@@ -26,38 +27,38 @@ public class LocationInformationPanel : MonoBehaviour
         flagService = ServiceLocator.Instance.Get<ScenarioFlagsService>() as ScenarioFlagsService;
         sceneManager = ServiceLocator.Instance.Get<SceneManagerService>() as SceneManagerService;
         locationService = ServiceLocator.Instance.Get<LocationDatabaseService>() as LocationDatabaseService;
+        itemCollectionService = ServiceLocator.Instance.Get<ItemCollectionService>() as ItemCollectionService;
 
         init = true;
     }
 
-    private void Start()
+    private void OnEnable()
     {
         if(!init) { Init(); }
 
         if (searchLocationDataSelf)
         {
-            LocationsData data = null;
             int locationID = sceneManager.CurrentLocationID;
             if (locationID == SceneManagerService.MENU_ID) { return; }
-            data = locationService.GetLocationData(locationID);
 
-            Setup(data);
+            Setup(locationID);
         }
     }
     
-    public void Setup(LocationsData data)
+    public void Setup(int locationID)
     {
         if(!init) { Init(); }
 
-        title.text = data.Name;
-        information.text = data.Description;
+        LocationsData locationData = locationService.GetLocationData(locationID);
 
-        LocationScenarioFlagPair locationInfo = locationScenarioPair[GetLocationIndex(data)];
+        title.text = locationData.Name;
+        information.text = locationData.Description;
+
+        LocationScenarioFlagPair locationInfo = locationScenarioPair[GetLocationIndex(locationData)];
         markerImage.texture = locationInfo.markerTexture;
         storyCompletedToggle.isOn = flagService.FlagConditionHasBeenMet(locationInfo.scenarioFlag);
 
-        // TODO: fill correct value:
-        itemsFoundValue.text = "0/0";
+        itemsFoundValue.text = GetCollectedItemsCount(locationID) + "/" + itemCollectionService.GetMaxItemsForScene(locationID);
     }
 
     private int GetLocationIndex(LocationsData data)
@@ -72,6 +73,11 @@ public class LocationInformationPanel : MonoBehaviour
         }
 
         return -1;
+    }
+
+    private int GetCollectedItemsCount(int sceneID)
+    {
+        return itemCollectionService.GetCollectedItemsForScene(sceneID);
     }
 }
 

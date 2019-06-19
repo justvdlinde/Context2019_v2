@@ -11,10 +11,10 @@ public class MenuLocationInfoUI : MonoBehaviour
         sidebar = GetComponent<SidebarUI>();
     }
 
-    public void Setup(LocationsData data)
+    public void Setup(int id)
     {
         gameObject.SetActive(true);
         sidebar.Open();
-        infoPanel.Setup(data);
+        infoPanel.Setup(id);
     }
 }
