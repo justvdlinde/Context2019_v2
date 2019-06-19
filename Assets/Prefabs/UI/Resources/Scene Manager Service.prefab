@@ -67,8 +67,9 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Laden
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 031fcea99949dc24fa7e529075b07cbd, type: 2}
+  m_sharedMaterial: {fileID: -5120205655303537935, guid: 031fcea99949dc24fa7e529075b07cbd,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -168,7 +169,7 @@ GameObject:
   - component: {fileID: 8784433403597075903}
   - component: {fileID: 4807128453291393659}
   - component: {fileID: 6184464082552172824}
-  - component: {fileID: 7774527461042351273}
+  - component: {fileID: 1214175644}
   m_Layer: 5
   m_Name: LoadingIcon
   m_TagString: Untagged
@@ -232,7 +233,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &7774527461042351273
+--- !u!114 &1214175644
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -241,11 +242,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5939636273653220578}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0c12a414faf9994fb1cbc65900591d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 59fd029e8cb0ca0409397bd47b7bee66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
   direction: {x: 0, y: 0, z: -1}
+  speed: 100
 --- !u!1 &6057229969861088184
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,7 +502,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 97065e94242b8294fa59770fb78293e4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

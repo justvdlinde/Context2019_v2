@@ -17,6 +17,7 @@ public class SidebarUI : MonoBehaviour
 
     public const string ANIMATOR_OPEN_TRIGGER = "Open";
     public const string ANIMATOR_CLOSE_TRIGGER = "Close";
+    public static bool IsOpen { get; private set; }
 
     public Action OpenEvent;
     public Action CloseEvent;
@@ -49,11 +50,13 @@ public class SidebarUI : MonoBehaviour
     private void OnCloseButtonClickedEvent()
     {
         Close();
+        IsOpen = false;
     }
 
     private void OnOpenButtonClickedEvent()
     {
         Open();
+        IsOpen = true;
     }
 
     public void Close()
