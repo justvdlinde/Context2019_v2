@@ -67,8 +67,9 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Uitleg
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1683c6b6d36ab4f4d990f82bf26ed341, type: 2}
+  m_sharedMaterial: {fileID: -6531126351601809499, guid: 1683c6b6d36ab4f4d990f82bf26ed341,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -167,7 +168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5740904729004224817}
   m_Layer: 5
-  m_Name: Info Panel
+  m_Name: Scan Info Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -265,8 +266,9 @@ MonoBehaviour:
     eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
     vel, aliquet nec, vulputate eget,
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f9f197b1fee2cdd48b6f97f035ff532a, type: 2}
+  m_sharedMaterial: {fileID: 1072831951666854237, guid: f9f197b1fee2cdd48b6f97f035ff532a,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -308,7 +310,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 340
+  m_firstOverflowCharacterIndex: 335
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -337,7 +339,7 @@ MonoBehaviour:
     spaceCount: 50
     wordCount: 51
     linkCount: 0
-    lineCount: 17
+    lineCount: 18
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
