@@ -208,7 +208,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4845741285096358101}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -267,6 +267,7 @@ MonoBehaviour:
   hideAtStart: 0
   hasOutline: 1
   isViewable: 1
+  destroyAfterPickup: 1
   destroyAfterInteraction: 0
   gObject: {fileID: 4845741285096358101}
   collider: {fileID: 7727193976585188414}
