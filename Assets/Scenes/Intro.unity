@@ -666,6 +666,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4847128506387444876, guid: d9bd45a125a51e6478c1fed541e8e746,
+        type: 3}
+      propertyPath: messageContent
+      value: "U heeft het verhaal volledig uitgespeeld! \n\nBezoek de kamers nogmaals
+        om meer informatie over Culemborg en de middeleeuwen te leren."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9bd45a125a51e6478c1fed541e8e746, type: 3}
 --- !u!1 &2141806186

@@ -43,6 +43,9 @@ public class QuestHintUIService : MonoBehaviour, IService
 
     private void OnDestroy()
     {
-        hintService.CurrentHintChangedEvent -= OnCurrentHintChangedEvent;
+        if (hintService != null)
+        {
+            hintService.CurrentHintChangedEvent -= OnCurrentHintChangedEvent;
+        }
     }
 }
