@@ -33,6 +33,9 @@ public class FlagConditionCheck : MonoBehaviour
         {
             bool check = flagService.FlagConditionHasBeenMet(condition.flag);
             returnValue = check == Convert.ToBoolean(condition.boolCondition);
+
+            Debug.Log(gameObject + ": " + condition.flag + " needs to be " + condition.boolCondition + " is " + check);
+
             if (!returnValue) { return false; }
         }
         
