@@ -55,7 +55,7 @@ public class MenuMovementController : MonoBehaviour
 
     private void Orbit()
     {
-        if (playerInput.IsPressed)
+        if (playerInput.IsPressed && playerInput != null)
         {
             horizontalDegree += playerInput.PositionDelta.x * horizontalRotationSpeed * Time.deltaTime;
             verticalDegree -= playerInput.PositionDelta.y * verticalRotationSpeed * Time.deltaTime;

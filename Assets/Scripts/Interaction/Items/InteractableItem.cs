@@ -71,7 +71,6 @@ public class InteractableItem : MonoBehaviour, IInteractable
             rigidbodyWasKinematicBeforeInteraction = rigidbody.isKinematic;
             rigidbody.isKinematic = true;
         }
-
         InteractionStartEvent?.Invoke();
     }
 
@@ -90,6 +89,9 @@ public class InteractableItem : MonoBehaviour, IInteractable
         if (destroyAfterInteraction)
         {
             Destroy(gameObject);
+
+            mRendererOutline.enabled = false;
+            mRendererParent.enabled = false;
             return;
         }
 
