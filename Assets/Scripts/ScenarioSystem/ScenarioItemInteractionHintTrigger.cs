@@ -10,15 +10,10 @@ public class ScenarioItemInteractionHintTrigger : MonoBehaviour
 
     private ScenarioHintService hintService;
 
-    private void OnValidate()
-    {
-        interactableObject = gameObject.GetInterface<IInteractable>();
-    }
-
     private void OnEnable()
     {
         hintService = ServiceLocator.Instance.Get<ScenarioHintService>() as ScenarioHintService;
-
+        interactableObject = gameObject.GetInterface<IInteractable>();
         interactableObject.InteractionStartEvent += TriggerInteractionStartEvent;
     }
 
