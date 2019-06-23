@@ -1,20 +1,25 @@
-﻿using UnityEngine;
-using GoogleARCore;
-using UnityEngine.SceneManagement;
-using System.Collections;
+﻿using GoogleARCore;
+using UnityEngine;
 
 public class TrackedImageScene : TrackedImageObject
 {
     [SerializeField, ScenePath] private string scene;
     public string Scene => scene;
 
-    private ARSceneAnchor sceneAnchor;
+    //private ARSceneAnchor sceneAnchor;
     private SceneManagerService sceneManager;
 
     private void Awake()
     {
         sceneManager = ServiceLocatorNamespace.ServiceLocator.Instance.Get<SceneManagerService>() as SceneManagerService;
-        sceneAnchor = FindObjectOfType<ARSceneAnchor>();
+        //sceneAnchor = FindObjectOfType<ARSceneAnchor>();
+
+        ResetAROriginPosition();
+    }
+
+    private void ResetAROriginPosition()
+    {
+        transform.position = Vector3.zero;
     }
 
     public override void Show(AugmentedImage image)
@@ -25,7 +30,7 @@ public class TrackedImageScene : TrackedImageObject
 
     private void OnDoneLoadingEvent()
     {
-        sceneAnchor = FindObjectOfType<ARSceneAnchor>();
+        //sceneAnchor = FindObjectOfType<ARSceneAnchor>();
     }
 
     public override void Update()
@@ -34,7 +39,7 @@ public class TrackedImageScene : TrackedImageObject
         {
             if (Image.TrackingState == TrackingState.Tracking)
             {
-                sceneAnchor.transform.position = Image.CenterPose.position;
+                //sceneAnchor.transform.position = Image.CenterPose.position;
             }
             else
             {
