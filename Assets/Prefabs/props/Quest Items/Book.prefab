@@ -135,7 +135,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8790aa0f70dd1074aa36489d77bada86, type: 2}
+  - {fileID: 2100000, guid: 110f088b00768af43a5d9d94e3981afd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -267,7 +267,6 @@ MonoBehaviour:
   hideAtStart: 0
   hasOutline: 1
   isViewable: 1
-  destroyAfterPickup: 1
   destroyAfterInteraction: 0
   gObject: {fileID: 4845741285096358101}
   collider: {fileID: 7727193976585188414}
