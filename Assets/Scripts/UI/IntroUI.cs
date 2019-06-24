@@ -13,8 +13,10 @@ public class IntroUI : MonoBehaviour
     [SerializeField] private GameObject uiRoot;
     [SerializeField] private GameObject languageRoot;
     [SerializeField] private GameObject introRoot;
+    [SerializeField] private GameObject[] infoPanels;
 
     private SceneManagerService sceneManager;
+    private int infoPanelIndex;
 
     private void Start()
     {
@@ -23,6 +25,11 @@ public class IntroUI : MonoBehaviour
         uiRoot.SetActive(true);
         languageRoot.SetActive(true);
         introRoot.SetActive(false);
+
+        for (int i = 0; i < infoPanels.Length; i++)
+        {
+            infoPanels[i].SetActive(i == 0);
+        }
     }
 
     private void OnEnable()
@@ -57,6 +64,18 @@ public class IntroUI : MonoBehaviour
 
     private void OnContinueButtonClicked()
     {
-        sceneManager.LoadScene(mainMenu);
+        infoPanelIndex++;
+
+        if (infoPanelIndex == infoPanels.Length)
+        {
+            sceneManager.LoadScene(mainMenu);
+        }
+        else
+        {
+            for (int i = 0; i < infoPanels.Length; i++)
+            {
+                infoPanels[i].SetActive(i == infoPanelIndex);
+            }
+        }
     }
 }
