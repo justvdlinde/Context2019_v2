@@ -6,6 +6,8 @@ public class Location : MonoBehaviour, IInteractable
     [SerializeField] [LocationID] private int id;
     public int ID => id;
 
+    [SerializeField] private ParticleSystem selectionParticle;
+
     public GameObject GameObject => gameObject;
     public Collider Collider => GetComponent<Collider>();
     public bool HideAtStart => false;
@@ -30,6 +32,9 @@ public class Location : MonoBehaviour, IInteractable
 
     private void OnSelectChange(bool selected)
     {
-        // set outline color
+        if (selected)
+        {
+            selectionParticle.Play();
+        }
     }
 }
