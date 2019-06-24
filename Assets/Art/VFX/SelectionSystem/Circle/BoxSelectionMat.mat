@@ -80,9 +80,9 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Float0: 0.243
-    - _Float1: 42.1
-    - _Float2: 2.44
+    - _Float0: 0.395
+    - _Float1: 50
+    - _Float2: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
