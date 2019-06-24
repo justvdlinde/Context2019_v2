@@ -10,15 +10,10 @@ public class ScenarioItemInteractionFlagTrigger : MonoBehaviour
 
     private ScenarioFlagsService flagService;
 
-    private void OnValidate()
-    {
-        interactableObject = gameObject.GetInterface<IInteractable>();
-    }
-
     private void OnEnable()
     {
         flagService = ServiceLocator.Instance.Get<ScenarioFlagsService>() as ScenarioFlagsService;
-
+        interactableObject = gameObject.GetInterface<IInteractable>();
         interactableObject.InteractionStartEvent += TriggerInteractionStartEvent;
     }
 
